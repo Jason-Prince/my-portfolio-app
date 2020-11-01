@@ -17,32 +17,11 @@ a {
   box-sizing: border-box;
 }
 
-.icon--margin {
-  margin: 5px;
-
-  &.icon__html--size {
-    height: 6em;
-    width: 4em;
-  }
-
-  &.icon__css--size {
-    height: 6em;
-    width: 4em;
-  }
-
-  &.icon__sass--size {
-    height: 4em;
-    width: 4em;
-  }
-
-  &.icon__js--size {
-    height: 4em;
-    width: 4em;
-  }
-
-  &.icon__python--size {
-    height: 4em;
-    width: 4em;
-  }
-
+.section__icons {
+  min-width: 85px;
+  display: flex;
+  border: solid 1px red;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
