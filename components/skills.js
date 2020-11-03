@@ -1,27 +1,50 @@
-import Github from "../svg/github.svg";
-import MongoDB from "../svg/mongodb.svg";
-import Django from "../svg/django.svg";
-import Python from "../svg/python.svg";
-import Javascript from "../svg/javascript.svg";
-import Sass from "../svg/sass.svg";
-import CSS from "../svg/css3.svg";
-import HTML from "../svg/html5.svg";
-import NextJS from "../svg/nextjs.svg";
-import NodeJS from "../svg/nodejs.svg";
+import Css from "../components/svg/css";
+import Html from "../components/svg/html";
+import AirNationGuard from "../components/svg/airNationGaurd";
+import Django from "../components/svg/django";
+import Github from "../components/svg/github";
+import MapPin from "../components/svg/mapPin";
+import Javascript from "../components/svg/javascript";
+import Linkedin from "../components/svg/linkedin";
+import MongoDB from "../components/svg/mongodb";
+import NextJS from "../components/svg/nextjs";
+import NodeJS from "../components/svg/nodejs";
+import Gmail from "../components/svg/gmail";
+import PostgreSQL from "../components/svg/postgresql";
+import Python from "../components/svg/python";
+import ReactJS from "../components/svg/reatjs";
+import Sass from "../components/svg/sass";
+import Twitter from "../components/svg/twitter";
+import UniversityOfPhoenix from "../components/svg/universityOfPhoenix";
+import DOD from "../components/svg/dod";
+import VSCode from "../components/svg/vscode";
+import GoogleVoice from "../components/svg/googleVoice";
 
 const skills = () => {
   return (
-    <section className="section__icons">
-      <HTML />
+    <section>
+      <Html />
+      <Css />
+      <AirNationGuard />
       <Django />
       <Github />
-      <MongoDB />
-      <Python />
+      <MapPin />
       <Javascript />
-      <Sass />
-      <CSS />
+      <Linkedin />
+      <MongoDB />
       <NextJS />
       <NodeJS />
+      <MapPin />
+      <Gmail />
+      <PostgreSQL />
+      <Python />
+      <ReactJS />
+      <Sass />
+      <Twitter />
+      <UniversityOfPhoenix />
+      <DOD />
+      <VSCode />
+      <GoogleVoice />
     </section>
   );
 };
