@@ -1,4 +1,5 @@
 @import 'normalize';
+@import 'header';
 
 html,
 body {
@@ -17,13 +18,79 @@ a {
   box-sizing: border-box;
 }
 
-.section__icons {
-  min-width: 85px;
-  display: flex;
-  border: solid 1px red;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+      "html css sass"
+      "javascript reactjs nextjs"
+      "nodejs python django"
+      "github postgresql mongodb";
+  gap: 1em;
+  border: solid 1px red;  
+  width: 28em;
+}
+
+.skill__html {
+  grid-area: html;
+  place-self: center;
+  padding: .5em;
+}
+.skill__css {
+  grid-area: css;
+  place-self: center;
+  padding: .5em;
+}
+.skill__sass {
+  grid-area: sass;
+  place-self: center;
+  padding: .5em;
+}
+.skill__javascript {
+  grid-area: javascript;
+  place-self: center;
+  padding: .5em;
+}
+.skill__reactjs {
+  grid-area: reactjs;
+  place-self: center;
+  padding: .5em;
+}
+.skill__nextjs {
+  grid-area: nextjs;
+  place-self: center;
+  padding: .5em;
+}
+.skill__nodejs {
+  grid-area: nodejs;
+  place-self: center;
+  padding: .5em;
+}
+.skill__python {
+  grid-area: python;
+  place-self: center;
+  padding: .5em;
+}
+.skill__django {
+  grid-area: django;
+  place-self: center;
+  padding: .5em;
+}
+.skill__github {
+  grid-area: github;
+  place-self: center;
+  padding: .5em;
+}
+.skill__mongodb {
+  grid-area: mongodb;
+  place-self: center;
+  padding: .5em;
+}
+.skill__postgresql {
+  grid-area: postgresql;
+  place-self: center;
+  padding: .5em;
 }
 
 .svg--size{
@@ -31,10 +98,13 @@ a {
   width: 4em;
 }
 
+
 // styling for python svg
 .st0{fill:#656565;}
 .st1{fill:url(#SVGID_1_);}
 .st2{fill:url(#SVGID_2_);}
 .st3{opacity:0.444;fill:url(#SVGID_3_);enable-background:new;}
+
+
 
 

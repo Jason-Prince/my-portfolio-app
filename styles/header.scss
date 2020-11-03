@@ -1,0 +1,49 @@
+.header{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+      "myTitle"
+      "myName"; 
+    border: solid 1px red;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: .20em;
+    color: white;
+    margin: 1em 0;
+    padding: 1em 0;
+  
+    .header__myTitle--animation{
+      grid-area: myTitle;
+      justify-self: center;
+      animation: myTitle 3s 1s ease-in forwards;
+    }
+    .header__myName--animation{
+      grid-area: myName;
+      justify-self: center;
+      animation: myName 1s 4s ease-in forwards;
+    }
+  }
+
+  @keyframes myTitle {
+    0% {
+      color: white;
+      letter-spacing: .20em;
+    }
+    50% {
+      letter-spacing: .50em;
+    }
+    100% {
+      color: black;
+      letter-spacing: .20em;
+    }
+  }
+  @keyframes myName {
+    0% {
+      transform: translateY(-40%);
+    }
+    100% {
+      color: black;
+      transform: translateY(30%);
+    }
+  }
