@@ -1,7 +1,6 @@
 import Css from "../components/svg/css";
 import Html from "../components/svg/html";
 import Django from "../components/svg/django";
-import Github from "../components/svg/github";
 import Javascript from "../components/svg/javascript";
 import MongoDB from "../components/svg/mongodb";
 import NextJS from "../components/svg/nextjs";
@@ -14,40 +13,38 @@ import Sass from "../components/svg/sass";
 const skills = () => {
   return (
     <section className="skills">
-      <div className="skill__html">
+      <div className="skill row--0 item--title">skills</div>
+      <div className="skill row--1 item--html">
         <Html />
       </div>
-      <div className="skill__css">
+      <div className="skill row--1 item--css">
         <Css />
       </div>
-      <div className="skill__sass">
+      <div className="skill row--1 item--sass">
         <Sass />
       </div>
-      <div className="skill__javascript">
+      <div className="skill row--2 item--javascript">
         <Javascript />
       </div>
-      <div className="skill__reactjs">
+      <div className="skill row--2 item--reactjs">
         <ReactJS />
       </div>
-      <div className="skill__nextjs">
+      <div className="skill row--2 item--nextjs">
         <NextJS />
       </div>
-      <div className="skill__nodejs">
+      <div className="skill row--3 item--nodejs">
         <NodeJS />
       </div>
-      <div className="skill__python">
+      <div className="skill row--3 item--python">
         <Python />
       </div>
-      <div className="skill__django">
+      <div className="skill row--3 item--django">
         <Django />
       </div>
-      <div className="skill__github">
-        <Github />
-      </div>
-      <div className="skill__postgresql">
+      <div className="skill row--4 item--postgresql">
         <PostgreSQL />
       </div>
-      <div className="skill__mongodb">
+      <div className="skill row--4 item--mongodb">
         <MongoDB />
       </div>
     </section>

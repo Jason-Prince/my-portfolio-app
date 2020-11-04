@@ -1,5 +1,7 @@
 @import 'normalize';
 @import 'header';
+@import 'skills';
+@import 'contacts';
 
 html,
 body {
@@ -18,93 +20,51 @@ a {
   box-sizing: border-box;
 }
 
-.skills {
+.myPicture {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.myprojects {
+  border: solid 1px red;
+}
+
+
+
+.home {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2em;
+  grid-template-columns: .5fr 3fr 3fr 3fr .5fr;
   grid-template-rows: auto;
   grid-template-areas: 
-      "html css sass"
-      "javascript reactjs nextjs"
-      "nodejs python django"
-      "github postgresql mongodb";
-  gap: 1em;
-  border: solid 1px red;  
-  width: 28em;
-}
+  ". header header header ."
+  ". skills mypictures mypictures ."
+  ". contacts mypictures mypictures ."
+  ". myprojects myprojects myprojects ."
+  ". footer footer footer .";
 
-.skill__html {
-  grid-area: html;
-  place-self: center;
-  padding: .5em;
+  .home__header {
+    grid-area: header;
+  }
+  .home__skills {
+    grid-area: skills;
+    place-self: end;
+    justify-self: stretch;
+  }
+  .home__contacts {
+    grid-area: contacts;
+    place-self: end;
+    justify-self: stretch;
+  }
+  .home__mypictures {
+    grid-area: mypictures;
+    place-self: start;
+    justify-self: stretch;
+    align-self: stretch;
+  }
+  .home__myprojects {
+    grid-area: myprojects;
+  }
+  .home__footer {
+    grid-area: footer;
+  }
 }
-.skill__css {
-  grid-area: css;
-  place-self: center;
-  padding: .5em;
-}
-.skill__sass {
-  grid-area: sass;
-  place-self: center;
-  padding: .5em;
-}
-.skill__javascript {
-  grid-area: javascript;
-  place-self: center;
-  padding: .5em;
-}
-.skill__reactjs {
-  grid-area: reactjs;
-  place-self: center;
-  padding: .5em;
-}
-.skill__nextjs {
-  grid-area: nextjs;
-  place-self: center;
-  padding: .5em;
-}
-.skill__nodejs {
-  grid-area: nodejs;
-  place-self: center;
-  padding: .5em;
-}
-.skill__python {
-  grid-area: python;
-  place-self: center;
-  padding: .5em;
-}
-.skill__django {
-  grid-area: django;
-  place-self: center;
-  padding: .5em;
-}
-.skill__github {
-  grid-area: github;
-  place-self: center;
-  padding: .5em;
-}
-.skill__mongodb {
-  grid-area: mongodb;
-  place-self: center;
-  padding: .5em;
-}
-.skill__postgresql {
-  grid-area: postgresql;
-  place-self: center;
-  padding: .5em;
-}
-
-.svg--size{
-  height: 4em;
-  width: 4em;
-}
-
-
-// styling for python svg
-.st0{fill:#656565;}
-.st1{fill:url(#SVGID_1_);}
-.st2{fill:url(#SVGID_2_);}
-.st3{opacity:0.444;fill:url(#SVGID_3_);enable-background:new;}
-
-
-
-

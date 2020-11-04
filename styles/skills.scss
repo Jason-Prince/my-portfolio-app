@@ -1,0 +1,136 @@
+$duration: 1s;
+$delay__skills__boxshadow: 3s;
+$delay__skill__title: 4s;
+$delay__skill__row__1: 5s;
+$delay__skill__row__2: 6s;
+$delay__skill__row__3: 7s;
+$delay__skill__row__4: 8s;
+$translateY: translateY(-120%);
+
+
+.skills {
+    display: grid;
+    grid-template-columns: .5fr 3fr 3fr 3fr .5fr;
+    grid-template-rows: .5fr 1.8fr 1.8fr 1.8fr 1.8fr 1.8fr .5fr;
+    grid-template-areas: 
+        ". . . . ."
+        ". . skill__title . ."
+        ". html css sass ."
+        ". javascript reactjs nextjs ."
+        ". nodejs python django ."
+        ". postgresql mongodb . ."
+        ". . . . .";
+    gap: 1em;
+    animation: skills__boxshadow $duration $delay__skills__boxshadow ease-in-out forwards;
+
+    .skill {
+        place-self: center;
+        opacity: 0;
+        &.row--0 {
+            animation: skill__title__row $duration $delay__skill__title ease-in-out forwards;
+            &.item--title {
+                grid-area: skill__title;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                letter-spacing: .20em;
+            }
+        }
+        &.row--1 {
+            animation: skill__row__1 $duration $delay__skill__row__1 ease-in-out forwards;
+            &.item--html {
+                grid-area: html;
+            }
+            &.item--css {
+                grid-area: css;
+            }
+            &.item--sass {
+                grid-area: sass;
+            }
+        }
+        &.row--2 {
+            animation: skill__row__2 $duration $delay__skill__row__2 ease-in-out forwards;
+            &.item--javascript {
+                grid-area: javascript;
+            }
+            &.item--reactjs {
+                grid-area: reactjs;
+            }
+            &.item--nextjs {
+                grid-area: nextjs;
+            }
+        }
+        &.row--3 {
+            animation: skill__row__3 $duration $delay__skill__row__3 ease-in-out forwards;
+            &.item--nodejs {
+                grid-area: nodejs;
+            }
+            &.item--python {
+                grid-area: python;
+            }
+            &.item--django {
+                grid-area: django;
+            }
+        }
+        &.row--4 {
+            animation: skill__row__4 $duration $delay__skill__row__4 ease-in-out forwards;
+            &.item--postgresql {
+                grid-area: postgresql;
+            }
+            &.item--mongodb {
+                grid-area: mongodb;
+            }
+        }
+    }
+}
+.svg--size{
+    height: 4em;
+    width: 4em;
+}
+@keyframes skills__boxshadow {
+    100% {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+}
+@keyframes skill__title__row {
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes skill__row__1 {
+    0% {
+        transform: $translateY;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes skill__row__2 {
+    0% {
+        transform: $translateY;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes skill__row__3 {
+    0% {
+        transform: $translateY;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes skill__row__4 {
+    0% {
+        transform: $translateY;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+  
+  // styling for python svg
+  .st0{fill:#656565;}
+  .st1{fill:url(#SVGID_1_);}
+  .st2{fill:url(#SVGID_2_);}
+  .st3{opacity:0.444;fill:url(#SVGID_3_);enable-background:new;}  

@@ -2,7 +2,7 @@ const linkedin = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="svg--size"
+      className="svg--size linkedin--size"
       viewBox="1.786 1.783 287.865 76.248"
     >
       <path

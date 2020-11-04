@@ -1,0 +1,43 @@
+.contacts {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "twitter github linkedin"
+      "phone email .";
+    gap: 1em;
+    padding: 1em 0;
+      
+    .contact__twitter {
+      grid-area: twitter;
+      padding: .5em;
+      place-self: center;
+    }
+    .contact__github {
+      grid-area: github;
+      padding: .5em;
+      place-self: center;
+    }
+    .contact__linkedin {
+      grid-area: linkedin;
+      padding: .5em;
+      place-self: center;
+    }
+    .contact__phone {
+      grid-area: phone;
+      padding: .5em;
+      place-self: center;
+    }
+    .contact__email {
+      grid-area: email;
+      padding: .5em;
+      place-self: center;
+    }
+  
+  }
+  
+  .linkedin--size {
+    height: 4em;
+    width: 6em;
+  }
