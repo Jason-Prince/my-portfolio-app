@@ -1,82 +1,40 @@
-$duration: 1s;
-$delay__skills__boxshadow: 3s;
-$delay__skill__title: 4s;
-$delay__skill__row__1: 5s;
-$delay__skill__row__2: 6s;
-$delay__skill__row__3: 7s;
-$delay__skill__row__4: 8s;
-$translateY: translateY(-120%);
-
-
 .skills {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-areas: 
-        ". . . . ."
-        ". . a . ."
-        ". b c d ."
-        ". e f g ."
-        ". h i j ."
-        ". k l . ."
-        ". . . . .";
     gap: 1em;
-    animation: skills__boxshadow $duration $delay__skills__boxshadow ease-in-out forwards;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-areas: 
+        ". .  .  .  .  .  .  .  .  .  .  .  ."
+        ". aa aa aa aa aa aa aa aa aa aa aa ."
+        ". ba bb bc bd be bf bg bh bi bj bk ."
+        ". .  .  .  .  .  .  .  .  .  .  .  .";
 
-    .skill {
-        place-self: center;
+    .row {
         opacity: 0;
-        &.row--0 {
-            animation: skill__title__row $duration $delay__skill__title ease-in-out forwards;
-            &.item--title {
-                grid-area: a;
+        &.row--a {
+            animation: a 1s 3s ease-in-out forwards;
+            &.col {
+                place-self: center;
                 text-transform: uppercase;
                 font-size: 1.5rem;
                 letter-spacing: .20em;
+                &.col--a {grid-area: aa;}
             }
         }
-        &.row--1 {
-            animation: skill__row__1 $duration $delay__skill__row__1 ease-in-out forwards;
-            &.item--html {
-                grid-area: b;
-            }
-            &.item--css {
-                grid-area: c;
-            }
-            &.item--sass {
-                grid-area: d;
-            }
-        }
-        &.row--2 {
-            animation: skill__row__2 $duration $delay__skill__row__2 ease-in-out forwards;
-            &.item--javascript {
-                grid-area: e;
-            }
-            &.item--reactjs {
-                grid-area: f;
-            }
-            &.item--nextjs {
-                grid-area: g;
-            }
-        }
-        &.row--3 {
-            animation: skill__row__3 $duration $delay__skill__row__3 ease-in-out forwards;
-            &.item--nodejs {
-                grid-area: h;
-            }
-            &.item--python {
-                grid-area: i;
-            }
-            &.item--django {
-                grid-area: j;
-            }
-        }
-        &.row--4 {
-            animation: skill__row__4 $duration $delay__skill__row__4 ease-in-out forwards;
-            &.item--postgresql {
-                grid-area: k;
-            }
-            &.item--mongodb {
-                grid-area: l;
+        &.row--b {
+            animation: b 1s 4s ease-in-out forwards;
+            &.col {
+                place-self: center;
+                &.col--a {grid-area: ba;}
+                &.col--b {grid-area: bb;}
+                &.col--c {grid-area: bc;}
+                &.col--d {grid-area: bd;}
+                &.col--e {grid-area: be;}
+                &.col--f {grid-area: bf;}
+                &.col--g {grid-area: bg;}
+                &.col--h {grid-area: bh;}
+                &.col--i {grid-area: bi;}
+                &.col--j {grid-area: bj;}
+                &.col--k {grid-area: bk;}
             }
         }
     }
@@ -85,47 +43,13 @@ $translateY: translateY(-120%);
     height: 4em;
     width: 4em;
 }
-@keyframes skills__boxshadow {
-    100% {
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    }
+
+@keyframes a {
+    100% {opacity: 1;}
 }
-@keyframes skill__title__row {
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes skill__row__1 {
-    0% {
-        transform: $translateY;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes skill__row__2 {
-    0% {
-        transform: $translateY;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes skill__row__3 {
-    0% {
-        transform: $translateY;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes skill__row__4 {
-    0% {
-        transform: $translateY;
-    }
-    100% {
-        opacity: 1;
-    }
+@keyframes b {
+    0% {transform: translateY(-120%);}
+    100% {opacity: 1;}
 }
   
   // styling for python svg

@@ -1,29 +1,31 @@
 import Header from "../components/header";
 import Contacts from "../components/contacts";
 import Skills from "../components/skills";
-import MyPicture from "../components/myPictures";
 import MyProjects from "../components/myProjects";
 import Footer from "../components/footer";
 
 const Home = () => {
   return (
     <div className="home">
-      <div className="home__header">
+      <div className="row row--a col col--a">
         <Header />
       </div>
-      <div className="home__skills">
+      <div className="row row--b col col--a">
         <Skills />
       </div>
-      <div className="home__mypictures">
-        <MyPicture />
-      </div>
-      <div className="home__myprojects">
+      <div className="row row--c col col--a">
         <MyProjects />
       </div>
-      <div className="home__contacts">
+      <div className="row row--d col col--a">
+        <MyProjects />
+      </div>
+      <div className="row row--e col col--a">
+        <MyProjects />
+      </div>
+      <div className="row row--f col col--a">
         <Contacts />
       </div>
-      <div className="home__footer">
+      <div className="row row--g col col--a">
         <Footer />
       </div>
     </div>

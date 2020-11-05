@@ -13,38 +13,38 @@ import Sass from "../components/svg/sass";
 const skills = () => {
   return (
     <section className="skills">
-      <div className="skill row--0 item--title">skills</div>
-      <div className="skill row--1 item--html">
+      <div className="row row--a col col--a">Skills</div>
+      <div className="row row--b col col--a">
         <Html />
       </div>
-      <div className="skill row--1 item--css">
+      <div className="row row--b col col--b">
         <Css />
       </div>
-      <div className="skill row--1 item--sass">
+      <div className="row row--b col col--c">
         <Sass />
       </div>
-      <div className="skill row--2 item--javascript">
+      <div className="row row--b col col--d">
         <Javascript />
       </div>
-      <div className="skill row--2 item--reactjs">
+      <div className="row row--b col col--e">
         <ReactJS />
       </div>
-      <div className="skill row--2 item--nextjs">
+      <div className="row row--b col col--f">
         <NextJS />
       </div>
-      <div className="skill row--3 item--nodejs">
+      <div className="row row--b col col--g">
         <NodeJS />
       </div>
-      <div className="skill row--3 item--python">
+      <div className="row row--b col col--h">
         <Python />
       </div>
-      <div className="skill row--3 item--django">
+      <div className="row row--b col col--i">
         <Django />
       </div>
-      <div className="skill row--4 item--postgresql">
+      <div className="row row--b col col--j">
         <PostgreSQL />
       </div>
-      <div className="skill row--4 item--mongodb">
+      <div className="row row--b col col--k">
         <MongoDB />
       </div>
     </section>

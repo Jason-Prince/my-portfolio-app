@@ -1,38 +1,67 @@
 .home {
     display: grid;
-    gap: 2em;
-    grid-template-columns: .5fr 3fr 3fr 3fr .5fr;
-    grid-template-rows: auto;
+    gap: 1em;
+    grid-template-columns: repeat(14, 1fr);
     grid-template-areas: 
-    ". . . . ."
-    ". header header header ."
-    ". skills mypictures mypictures ."
-    ". myprojects myprojects myprojects ."
-    ". contacts contacts contacts ."
-    ". footer footer footer ."
-    ". . . . .";
-  
-    .home__header {
-      grid-area: header;
-    }
-    .home__skills {
-      grid-area: skills;
-      place-self: center stretch;
-    }
-    .home__contacts {
-      grid-area: contacts;
-      place-self: center stretch;
-    }
-    .home__mypictures {
-      grid-area: mypictures;
-      place-self: center stretch;
-    }
-    .home__myprojects {
-      grid-area: myprojects;
-      place-self: center stretch;
-    }
-    .home__footer {
-      grid-area: footer;
-      place-self: center stretch;
+    ". .  .  .  .  .  .  .  .  .  .  .  .  ."
+    ". aa aa aa aa aa aa aa aa aa aa aa aa ."
+    ". ba ba ba ba ba ba ba ba ba ba ba ba ."
+    ". ca ca ca ca ca ca ca ca ca ca ca ca ."
+    ". da da da da da da da da da da da da ."
+    ". ea ea ea ea ea ea ea ea ea ea ea ea ."
+    ". fa fa fa fa fa fa fa fa fa fa fa fa ."
+    ". ga ga ga ga ga ga ga ga ga ga ga ga ."
+    ". .  .  .  .  .  .  .  .  .  .  .  .  .";
+
+    .row {
+        &.row--a {
+            &.col {
+                &.col--a {
+                    grid-area: aa; // header
+                }
+            }
+        }
+        &.row--b {
+            &.col {
+                &.col--a {
+                    grid-area: ba; // skills
+                }
+            }
+        }
+        &.row--c {
+            &.col {
+                &.col--a {
+                    grid-area: ca; // project 1
+                }
+            }
+        }
+        &.row--d {
+            &.col {
+                &.col--a {
+                    grid-area: da; // project 2
+                }
+            }
+        }
+        &.row--e {
+            &.col {
+                &.col--a {
+                    grid-area: ea; // project 3
+                }
+            }
+        }
+        &.row--f {
+            &.col {
+                &.col--a {
+                    grid-area: fa; // contact me
+                }
+            }
+        }
+        &.row--g {
+            &.col {
+                &.col--a {
+                    grid-area: ga; // footer
+                }
+            }
+        }
     }
   }

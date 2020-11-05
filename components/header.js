@@ -1,8 +1,8 @@
 const header = () => {
   return (
     <section className="header">
-      <div className="item row--1 item--name">full stack web developer</div>
-      <div className="item row--0 item--title">jason prince</div>
+      <div className="row row--a col col--a">full stack web developer</div>
+      <div className="row row--b col col--a">jason prince</div>
     </section>
   );
 };
