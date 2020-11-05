@@ -2,23 +2,9 @@
 @import 'header';
 @import 'skills';
 @import 'contacts';
+@import 'footer';
+@import 'home';
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
 
 .myPicture {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -29,42 +15,3 @@ a {
 }
 
 
-
-.home {
-  display: grid;
-  gap: 2em;
-  grid-template-columns: .5fr 3fr 3fr 3fr .5fr;
-  grid-template-rows: auto;
-  grid-template-areas: 
-  ". header header header ."
-  ". skills mypictures mypictures ."
-  ". contacts mypictures mypictures ."
-  ". myprojects myprojects myprojects ."
-  ". footer footer footer .";
-
-  .home__header {
-    grid-area: header;
-  }
-  .home__skills {
-    grid-area: skills;
-    place-self: end;
-    justify-self: stretch;
-  }
-  .home__contacts {
-    grid-area: contacts;
-    place-self: end;
-    justify-self: stretch;
-  }
-  .home__mypictures {
-    grid-area: mypictures;
-    place-self: start;
-    justify-self: stretch;
-    align-self: stretch;
-  }
-  .home__myprojects {
-    grid-area: myprojects;
-  }
-  .home__footer {
-    grid-area: footer;
-  }
-}

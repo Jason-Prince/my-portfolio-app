@@ -1,32 +1,29 @@
 import Twitter from "../components/svg/twitter";
 import Github from "../components/svg/github";
 import Linkedin from "../components/svg/linkedin";
-import Phone from "../components/svg/googleVoice";
-import Email from "../components/svg/gmail";
 
 const contacts = () => {
   return (
     <section className="contacts">
-      <div className="contact__twitter">
+      <div className="contact item--title">contact me</div>
+      <div className="contact item--twitter">
         <a href="https://twitter.com/Enders_Game" target="_blank">
           <Twitter />
         </a>
       </div>
-      <div className="contact__github">
+      <div className="contact item--github">
         <a href="https://github.com/jason-prince" target="_blank">
           <Github />
         </a>
       </div>
-      <div className="contact__linkedin">
+      <div className="contact item--linkedin">
         <a href="https://www.linkedin.com/in/jason-c-prince/" target="_blank">
           <Linkedin />
         </a>
       </div>
-      <div className="contact__phone">
-        <Phone />
-      </div>
-      <div className="contact__email">
-        <Email />
+      <div className="contact item--phone-number">(415) 498-0783</div>
+      <div className="contact item--email-address">
+        jason.c.prince@gmail.com
       </div>
     </section>
   );

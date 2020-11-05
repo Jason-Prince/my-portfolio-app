@@ -10,15 +10,14 @@ $translateY: translateY(-120%);
 
 .skills {
     display: grid;
-    grid-template-columns: .5fr 3fr 3fr 3fr .5fr;
-    grid-template-rows: .5fr 1.8fr 1.8fr 1.8fr 1.8fr 1.8fr .5fr;
+    grid-template-columns: repeat(5, 1fr);
     grid-template-areas: 
         ". . . . ."
-        ". . skill__title . ."
-        ". html css sass ."
-        ". javascript reactjs nextjs ."
-        ". nodejs python django ."
-        ". postgresql mongodb . ."
+        ". . a . ."
+        ". b c d ."
+        ". e f g ."
+        ". h i j ."
+        ". k l . ."
         ". . . . .";
     gap: 1em;
     animation: skills__boxshadow $duration $delay__skills__boxshadow ease-in-out forwards;
@@ -29,7 +28,7 @@ $translateY: translateY(-120%);
         &.row--0 {
             animation: skill__title__row $duration $delay__skill__title ease-in-out forwards;
             &.item--title {
-                grid-area: skill__title;
+                grid-area: a;
                 text-transform: uppercase;
                 font-size: 1.5rem;
                 letter-spacing: .20em;
@@ -38,46 +37,46 @@ $translateY: translateY(-120%);
         &.row--1 {
             animation: skill__row__1 $duration $delay__skill__row__1 ease-in-out forwards;
             &.item--html {
-                grid-area: html;
+                grid-area: b;
             }
             &.item--css {
-                grid-area: css;
+                grid-area: c;
             }
             &.item--sass {
-                grid-area: sass;
+                grid-area: d;
             }
         }
         &.row--2 {
             animation: skill__row__2 $duration $delay__skill__row__2 ease-in-out forwards;
             &.item--javascript {
-                grid-area: javascript;
+                grid-area: e;
             }
             &.item--reactjs {
-                grid-area: reactjs;
+                grid-area: f;
             }
             &.item--nextjs {
-                grid-area: nextjs;
+                grid-area: g;
             }
         }
         &.row--3 {
             animation: skill__row__3 $duration $delay__skill__row__3 ease-in-out forwards;
             &.item--nodejs {
-                grid-area: nodejs;
+                grid-area: h;
             }
             &.item--python {
-                grid-area: python;
+                grid-area: i;
             }
             &.item--django {
-                grid-area: django;
+                grid-area: j;
             }
         }
         &.row--4 {
             animation: skill__row__4 $duration $delay__skill__row__4 ease-in-out forwards;
             &.item--postgresql {
-                grid-area: postgresql;
+                grid-area: k;
             }
             &.item--mongodb {
-                grid-area: mongodb;
+                grid-area: l;
             }
         }
     }

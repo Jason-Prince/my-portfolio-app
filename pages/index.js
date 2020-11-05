@@ -14,14 +14,14 @@ const Home = () => {
       <div className="home__skills">
         <Skills />
       </div>
-      <div className="home__contacts">
-        <Contacts />
-      </div>
       <div className="home__mypictures">
         <MyPicture />
       </div>
       <div className="home__myprojects">
         <MyProjects />
+      </div>
+      <div className="home__contacts">
+        <Contacts />
       </div>
       <div className="home__footer">
         <Footer />

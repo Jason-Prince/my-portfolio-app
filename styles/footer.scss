@@ -1,0 +1,15 @@
+.footer {
+    display: grid;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "."
+      "a"
+      ".";
+    gap: 1em;
+    .item--title {
+    grid-area: a;
+    justify-self: center;
+    text-transform: uppercase;
+    }
+}

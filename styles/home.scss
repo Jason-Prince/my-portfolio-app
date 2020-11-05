@@ -1,0 +1,38 @@
+.home {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: .5fr 3fr 3fr 3fr .5fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    ". . . . ."
+    ". header header header ."
+    ". skills mypictures mypictures ."
+    ". myprojects myprojects myprojects ."
+    ". contacts contacts contacts ."
+    ". footer footer footer ."
+    ". . . . .";
+  
+    .home__header {
+      grid-area: header;
+    }
+    .home__skills {
+      grid-area: skills;
+      place-self: center stretch;
+    }
+    .home__contacts {
+      grid-area: contacts;
+      place-self: center stretch;
+    }
+    .home__mypictures {
+      grid-area: mypictures;
+      place-self: center stretch;
+    }
+    .home__myprojects {
+      grid-area: myprojects;
+      place-self: center stretch;
+    }
+    .home__footer {
+      grid-area: footer;
+      place-self: center stretch;
+    }
+  }

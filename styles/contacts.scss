@@ -1,40 +1,39 @@
 .contacts {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: repeat(5, 1fr);
     grid-template-areas:
-      "twitter github linkedin"
-      "phone email .";
+      ". . . . ."
+      ". . a . ."
+      "b b c d d"
+      ". . e . ."
+      ". . f . ."
+      ". . . . .";
     gap: 1em;
-    padding: 1em 0;
-      
-    .contact__twitter {
-      grid-area: twitter;
-      padding: .5em;
+    .contact {
+      text-transform: uppercase;
       place-self: center;
+      &.item--title {
+        grid-area: a;
+        font-size: 1.5rem;
+        letter-spacing: .20em;
+      }
+      &.item--twitter {
+        grid-area: b;
+      }
+      &.item--github {
+        grid-area: c;
+      }
+      &.item--linkedin {
+        grid-area: d;
+      }
+      &.item--phone-number {
+        grid-area: e;
+      }
+      &.item--email-address {
+        grid-area: f;
+      }
     }
-    .contact__github {
-      grid-area: github;
-      padding: .5em;
-      place-self: center;
-    }
-    .contact__linkedin {
-      grid-area: linkedin;
-      padding: .5em;
-      place-self: center;
-    }
-    .contact__phone {
-      grid-area: phone;
-      padding: .5em;
-      place-self: center;
-    }
-    .contact__email {
-      grid-area: email;
-      padding: .5em;
-      place-self: center;
-    }
-  
   }
   
   .linkedin--size {
