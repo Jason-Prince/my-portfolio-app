@@ -1,0 +1,79 @@
+.projects {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(14, 1fr);
+    grid-template-areas: 
+    ".  .   .   .   .   .   .   .   .   .   .   .   .  ."
+    ". tre tre tre tre tre tre  .  ire ire ire ire ire ."
+    ". dre dre dre dre dre dre  .  ire ire ire ire ire ."
+    ". lre lre  .   .  rre rre  .  ire ire ire ire ire ."
+    ".  .   .   .   .   .   .   .   .   .   .   .   .  ."
+    ". iwp iwp iwp iwp iwp  .  dwp dwp dwp dwp dwp dwp ."
+    ". iwp iwp iwp iwp iwp  .  twp twp twp twp twp twp ."
+    ". iwp iwp iwp iwp iwp  .  lwp lwp  .   .  rwp rwp ."
+    ".  .   .   .   .   .   .   .   .   .   .   .   .  ."
+    ". tis tis tis tis tis tis  .  iis iis iis iis iis ."
+    ". dis dis dis dis dis dis  .  iis iis iis iis iis ."
+    ". lis lis  .   .  ris ris  .  iis iis iis iis iis ."
+    ".  .   .   .   .   .   .   .   .   .   .   .   .  .";
+
+    .reciepe-editor {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        .title--reciepe-editor {
+            grid-area: tre;
+        }
+        .description--reciepe-editor {
+            grid-area: dre;
+        }
+        .live--reciepe-editor {
+            grid-area: lre;
+        }
+        .repo--reciepe-editor {
+            grid-area: rre;
+        }
+        .image--reciepe-editor {
+            grid-area: ire;
+            width: 100%;
+        }
+    }
+
+    .web-portfolio {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        .title--web-portfolio {
+            grid-area: twp;
+        }
+        .description--web-portfolio {
+            grid-area: dwp;
+        }
+        .live--web-portfolio {
+            grid-area: lwp;
+        }
+        .repo--web-portfolio {
+            grid-area: rwp;
+        }
+        .image--web-portfolio {
+            grid-area: iwp;
+            width: 100%;
+        }
+    }
+
+    .image-search {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        .title--image-search {
+            grid-area: tis;
+        }
+        .description--image-search {
+            grid-area: dis;
+        }
+        .live--image-search {
+            grid-area: lis;
+        }
+        .repo--image-search {
+            grid-area: ris;
+        }
+        .image--image-search {
+            grid-area: iis;
+            width: 100%;
+        }
+    }
+}

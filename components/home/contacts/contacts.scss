@@ -1,0 +1,52 @@
+.contacts {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(14, 1fr);
+    grid-template-areas:
+      ". .  .  .  .  .  .  .  .  .  .  .  .  ."
+      ". .  .  .  .  aa aa aa aa  .  .  .  .  ." // title
+      ". ba ba .  .  .  bb bb .  .  .  bc bc ." // twitter github linkedin
+      ". .  .  ca ca ca .  .  cb cb cb .  .  ." // phone email
+      ". .  .  .  .  .  .  .  .  .  .  .  .  .";
+
+    .row {
+      text-transform: uppercase;
+      justify-self: center;
+      &.row--a {
+        &.col {
+          &.col--a {
+            grid-area: aa; // title
+          }
+        }
+      }
+      &.row--b {
+        &.col {
+          &.col--a {
+            grid-area: ba; // twitter
+          }
+          &.col--b {
+            grid-area: bb; // github
+          }
+          &.col--c {
+            grid-area: bc; // linkedin
+          }
+        }
+      }
+      &.row--c {
+        &.col {
+          &.col--a {
+            grid-area: ca; // phone
+          }
+          &.col--b {
+            grid-area: cb; // email
+          }
+        }
+      }
+    }
+  }
+  
+  .linkedin--size {
+    height: 4em;
+    width: 6em;
+  }

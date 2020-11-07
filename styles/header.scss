@@ -1,54 +1,27 @@
-.header{
-    display: grid;
-    gap: 1em;
-    animation: header__boxshadow 1s ease-in-out forwards;
-    grid-template-columns: repeat(14, 1fr);
-    grid-template-areas: 
-    ". .  .  .  .  .  .  .  .  .  .  .  .  ."
-    ". aa aa aa aa aa aa aa aa aa aa aa aa ."
-    ". ba ba ba ba ba ba ba ba ba ba ba ba ."
-    ". .  .  .  .  .  .  .  .  .  .  .  .  .";
-
-    .row {
-        justify-self: center;
-        opacity: 0;
-        text-transform: uppercase;
-        font-size: 2rem;
-        letter-spacing: .20em;
-        &.row--a {
-            &.col {
-                &.col--a { // title
-                    grid-area: aa;
-                    animation: aa 1s 1s ease-in-out forwards;
-                }
-            }
-        }
-        &.row--b {
-            &.col {
-                &.col--a { // name
-                    grid-area: ba;
-                    animation: ba 1s 2s ease-in-out forwards;
-                }
-            }
-        }
-    }
+.header {
+  display: grid;
+  gap: 1em;
+  margin: 1em;
+  padding: 1em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "header__title" 
+  "header__name";
+  
+  .header__title {
+    grid-area: header__title;
+    justify-self: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: .15em;
   }
-
-  @keyframes header__boxshadow {
-    100% {
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      }
+  .header__name {
+    grid-area: header__name;
+    justify-self: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: .15em;
   }
-  @keyframes aa {
-    100% {
-        opacity: 1;
-    }
-  }
-  @keyframes ba {
-    0% {
-      transform: translateY(-120%);
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+}

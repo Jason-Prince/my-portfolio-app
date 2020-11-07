@@ -1,4 +1,4 @@
-const reatjs = () => {
+const reactjs = () => {
   return (
     <svg
       className="svg--size"
@@ -26,4 +26,4 @@ const reatjs = () => {
   );
 };
 
-export default reatjs;
+export default reactjs;
