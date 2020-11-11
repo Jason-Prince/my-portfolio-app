@@ -54,6 +54,110 @@ a:hover {
             grid-template-columns: 400px;
             place-items: center;
         }
+        .contact-me {
+            display: grid;
+            padding: .5em;
+            gap: .5em;
+            place-items: center;
+            grid-template-columns: 400px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            grid-template-areas: 
+                "github__profile" 
+                "linkedin__profile" 
+                "phone"
+                "email";
+            .github__profile {
+                grid-area: github__profile;
+                display: grid;
+                gap: .5em;
+                grid-template-columns: auto 1fr auto;
+                grid-template-areas:
+                    "github__icon github__text external-link__icon";
+                .github__icon {
+                    grid-area: github__icon;
+                    width: 1.2em;
+                    color: #211F1F;
+                }
+                .github__text {
+                    grid-area: github__text;
+                    color: black;
+                    font-size: 1.1rem;
+                }
+                .external-link__icon {
+                    grid-area: external-link__icon;
+                    font-size: .7em;
+                    color: gray;
+                }
+            }
+            .linkedin__profile {
+                grid-area: linkedin__profile;
+                display: grid;
+                gap: .5em;
+                grid-template-columns: auto 1fr auto;
+                grid-template-areas:
+                    "linkedin__icon linkedin__text external-link__icon";
+                .linkedin__icon {
+                    grid-area: linkedin__icon;
+                    width: 1.3em;
+                    color: #0077B5;
+                }
+                .linkedin__text {
+                    grid-area: linkedin__text;
+                    color: black;
+                    font-size: 1.1rem;
+                }
+                .external-link__icon {
+                    grid-area: external-link__icon;
+                    font-size: .7em;
+                    color: gray;
+                    
+                }
+            }
+            .email {
+                grid-area: email;
+                display: grid;
+                gap: .5em;
+                grid-template-columns: auto 1fr auto;
+                grid-template-areas:
+                    "email__icon email__address copy__icon";
+                .email__icon {
+                    grid-area: email__icon;
+                    width: 1.2em;
+                    color: #4285F4;
+                }
+                .email__address {
+                    grid-area: email__address;
+                    font-size: 1.1rem;
+                }
+                .copy__icon {
+                    grid-area: copy__icon;
+                    font-size: .7em;
+                    color: gray;
+                }
+            }
+            .phone {
+                grid-area: phone;
+                display: grid;
+                gap: .5em;
+                grid-template-columns: auto 1fr auto;
+                grid-template-areas:
+                    "phone__icon phone__address copy__icon";
+                .phone__icon {
+                    grid-area: phone__icon;
+                    width: 1.1em;
+                    color: #4285F4;
+                }
+                .phone__address {
+                    grid-area: phone__number;
+                    font-size: 1.1rem;
+                }
+                .copy__icon {
+                    grid-area: copy__icon;
+                    font-size: .7em;
+                    color: gray;
+                }
+            }
+        }
         .card {
             display: grid;
             grid-template-rows: 2fr auto;
@@ -76,6 +180,24 @@ a:hover {
             }
             .content--padding-left {
                 padding-left: 2em;
+            }
+            .link__container {
+                display: grid;
+                grid-template-columns: repeat(2, auto) 1fr;
+                gap: .6em;
+                color: black;
+            }
+            
+            .link__container:hover {
+                text-decoration: underline;
+            }
+
+            .icon--small {
+                font-size: .6em;
+                
+            }
+            .icon--large {
+                font-size: 1em;
             }
         }
     }

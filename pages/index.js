@@ -20,12 +20,28 @@ const home = () => {
             />
           </div>
           <div className="content">
-            <div className="content--left">live demo link</div>
+            <a
+              className="link__container"
+              href="https://reciepes.netlify.app/"
+              target="_blank"
+            >
+              <i className="fas fa-link"></i>
+              <div>Live Demo</div>
+              <i className="fas fa-external-link-alt icon--small"></i>
+            </a>
             <div className="content--left">
               <span>Coolking with React</span>
               <span>All about cooking with react</span>
             </div>
-            <div className="content--left">github code link</div>
+            <a
+              className="link__container"
+              href="https://github.com/Jason-Prince/Cooking-With-React"
+              target="_blank"
+            >
+              <i className="fab fa-github"></i>
+              <div>Github Repository</div>
+              <i className="fas fa-external-link-alt icon--small"></i>
+            </a>
           </div>
         </div>
         {/* pixabay image search */}
@@ -37,9 +53,25 @@ const home = () => {
             />
           </div>
           <div className="content">
-            <div className="content--left">live demo link</div>
+            <a
+              className="link__container"
+              href="https://image-search-pixabay.netlify.app/"
+              target="_blank"
+            >
+              <i className="fas fa-link"></i>
+              <div>Live Demo</div>
+              <i className="fas fa-external-link-alt icon--small"></i>
+            </a>
             <div className="content--left">Pixabay Image Search</div>
-            <div className="content--left">github code link</div>
+            <a
+              className="link__container"
+              href="https://github.com/Jason-Prince/image-gallery"
+              target="_blank"
+            >
+              <i className="fab fa-github"></i>
+              <div>Github Repository</div>
+              <i className="fas fa-external-link-alt icon--small"></i>
+            </a>
           </div>
         </div>
         {/* web portfolio */}
@@ -48,14 +80,22 @@ const home = () => {
             <img src="https://via.placeholder.com/400" alt="web portfolio" />
           </div>
           <div className="content">
-            <div className="content--left">live demo link</div>
+            <a className="link__container" href="#" target="_blank">
+              <i className="fas fa-link"></i>
+              <div>Live Demo</div>
+              <i className="fas fa-external-link-alt icon--small"></i>
+            </a>
             <div className="content--left">
               Portfolio Site I needed a place to showcase my projects. I used a
               next js framework and hosted from vercel. Styling in sass with a
               grid display and organized with bem. Icons are svg and came from
               fontawesome.
             </div>
-            <div className="content--left">github code link</div>
+            <a className="link__container" href="#" target="_blank">
+              <i className="fab fa-github"></i>
+              <div>Github Repository</div>
+              <i className="fas fa-external-link-alt icon--small"></i>
+            </a>
           </div>
         </div>
         {/* accomplishments */}
@@ -76,12 +116,46 @@ const home = () => {
         </div>
         {/* contact me */}
         <div className="section">Contact Me</div>
-        <div className="card">
-          <div className="content">
-            <div className="content--center">linkedin</div>
-            <div className="content--center">github</div>
-            <div className="content--center">phone</div>
-            <div className="content--center">email</div>
+        <div className="contact-me">
+          <a
+            className="github__profile"
+            href="https://github.com/jason-prince"
+            target="_blank"
+          >
+            {/* <i className="fab fa-github-square github__icon"></i> */}
+            <img className="github__icon" src="/github.png" alt="github logo" />
+            <div className="github__text">Github Profile</div>
+            <i className="fas fa-external-link-alt external-link__icon"></i>
+          </a>
+          <a
+            className="linkedin__profile"
+            href="https://www.linkedin.com/in/jason-c-prince/"
+            target="_blank"
+          >
+            {/* <i className="fab fa-linkedin linkedin__icon"></i> */}
+            <img
+              className="linkedin__icon"
+              src="/linkedIn.png"
+              alt="linkedin logo"
+            />
+            <div className="linkedin__text">Linkedin Profile</div>
+            <i className="fas fa-external-link-alt external-link__icon"></i>
+          </a>
+          <div className="phone">
+            {/* <i className="fas fa-phone-square-alt phone__icon"></i> */}
+            <img
+              className="phone__icon"
+              src="/google_voice_96dp.png"
+              alt="phone"
+            />
+            <div className="phone__number">(415) 498-0783</div>
+            <i className="far fa-copy copy__icon"></i>
+          </div>
+          <div className="email">
+            {/* <i className="fas fa-envelope-square email__icon"></i> */}
+            <img className="email__icon" src="/gmail.png" alt="gmail logo" />
+            <div className="email__address">jason.c.prince@gmail.com</div>
+            <i className="far fa-copy copy__icon"></i>
           </div>
         </div>
         {/* footer */}
