@@ -1,20 +1,46 @@
 .web_portfolio {
     display: grid;
     gap: 1em;
-    padding: 1em;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    font-size: .6rem;
+    margin: 0 1em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
     grid-template-areas:
-    "web_portfolio__image  web_portfolio__content__container";
+    "web_portfolio__image  web_portfolio__content web_portfolio__content";
     
     .web_portfolio__image {
         grid-area: web_portfolio__image;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         width: 100%;
     }
-    .web_portfolio__content__container {
-        grid-area: web_portfolio__content__container;
+    .web_portfolio__image:hover {
+        
+    }
+   
+    .web_portfolio__content {
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        width: 100%;
+        grid-area: web_portfolio__content;
+        font-size: .6rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "web_portfolio__content__title"
+        "web_portfolio__content__subtitle"
+        "web_portfolio__content__details";
+    
+        .web_portfolio__content__title {
+            grid-area: web_portfolio__content__title;
+            place-self: center;
+            font-size: .7rem;
+        }
+        .web_portfolio__content__subtitle {
+            grid-area: web_portfolio__content__subtitle;
+            place-self: center;
+        }
+        .web_portfolio__content__details {
+            grid-area: web_portfolio__content__details;
+            place-self: center;
+            text-transform: uppercase;
+        }
     }
 }

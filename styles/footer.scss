@@ -1,0 +1,16 @@
+.footer {
+    display: grid;
+    gap: 1em;
+    margin: 1em;
+    padding: 1em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "footer__copyright"; 
+    
+    .footer__copyright {
+        grid-area: footer__copyright;
+        place-self: center;
+    }
+  }

@@ -1,15 +1,59 @@
 @import 'normalize';
-@import 'header';
-@import 'skills';
-@import 'web_portfolio';
-@import 'pixabay_image_search';
-@import 'cooking_with_react';
-@import 'accomplishments';
-@import 'contact_me';
-@import 'footer';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+// @import 'home';
+// @import 'header';
+// @import 'skills';
+// @import 'web_portfolio';
+// @import 'pixabay_image_search';
+// @import 'cooking_with_react';
+// @import 'accomplishments';
+// @import 'contact_me';
+// @import 'footer';
 
 
 body {
     font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.menu-icon {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "menu-bars menu-x";
+    .menu-bars {
+        grid-area: menu-bars;
+        justify-self: end;
+    }
+    .menu-x {
+        grid-area: menu-x;
+
+    }
+}
+
+
+
+.body {
+    display: grid;
+    place-items: center;
+    .row {
+        display: grid;
+        gap: 1em;
+        grid-template-rows: auto;
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .content--center {
+                display: grid;
+                place-items: center;
+            }
+        }
+    }
 }

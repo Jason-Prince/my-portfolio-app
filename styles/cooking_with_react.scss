@@ -1,0 +1,44 @@
+.cooking_with_react {
+    display: grid;
+    gap: 1em;
+    padding: 1em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "cooking_with_react__image  cooking_with_react__content cooking_with_react__content";
+    
+    .cooking_with_react__image {
+        grid-area: cooking_with_react__image;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        width: 100%;
+    }
+   
+    .cooking_with_react__content {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        grid-area: cooking_with_react__content;
+        display: grid;
+        gap: 1em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "cooking_with_react__content__title    cooking_with_react__content__title"
+        "cooking_with_react__content__details  cooking_with_react__content__details"
+        "cooking_with_react__content__live     cooking_with_react__content__repo";
+    
+        .cooking_with_react__content__title {
+            grid-area: cooking_with_react__content__title;
+            place-self: center;
+        }
+        .cooking_with_react__content__details {
+            grid-area: cooking_with_react__content__details;
+            place-self: center;
+        }
+        .cooking_with_react__content__live {
+            grid-area: cooking_with_react__content__live;
+            place-self: center;
+        }
+        .cooking_with_react__content__repo {
+            grid-area: cooking_with_react__content__repo;
+            place-self: center;
+        }
+    }
+}

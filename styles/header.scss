@@ -1,27 +1,18 @@
 .header {
   display: grid;
-  gap: 1em;
-  margin: 1em;
-  padding: 1em;
+  padding: .2em;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-transform: uppercase;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
   grid-template-areas:
-  "header__title" 
-  "header__name";
-  
+    "header__title"
+    "header__name";
   .header__title {
     grid-area: header__title;
-    justify-self: center;
-    text-transform: uppercase;
-    font-size: 2rem;
-    letter-spacing: .15em;
+    place-self: center;
   }
   .header__name {
     grid-area: header__name;
-    justify-self: center;
-    text-transform: uppercase;
-    font-size: 2rem;
-    letter-spacing: .15em;
+    place-self: center;
   }
 }

@@ -1,40 +1,5 @@
 .home {
     display: grid;
-    gap: 1em;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "home__header"
-        "home__skills"
-        "home__web-portfolio"
-        "home__pixabay_image_search"
-        "home__cooking_with_react"
-        "home__accomplishments"
-        "home__contact_me"
-        "home__footer";
-        
-    .home__header {
-        grid-area: home__header;
-    }
-    .home__skills {
-        grid-area: home__skills;
-    }
-    .home__web_portfolio {
-        grid-area: home__web_portfolio;
-    }
-    .home__pixabay_image_search {
-        grid-area: home__pixabay_image_search;
-    }
-    .home__cooking_with_react {
-        grid-area: home__cooking_with_react;
-    }
-    .home__accomplishments {
-        grid-area: home__accomplishments;
-    }
-    .home__contact_me {
-        grid-area: home__contact_me;
-    }
-    .home__footer {
-        grid-area: home__footer;
-    }
+    grid-template-columns: 411px;
+    gap: .5em;
 }

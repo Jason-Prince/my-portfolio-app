@@ -1,81 +1,29 @@
 .skills {
     display: grid;
-    gap: 1em;
-    margin: 1em;
-    padding: 1em;
+    margin: 0 1em;
+    padding: .2em;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    grid-template-columns: auto;
+    text-transform: uppercase;
+    font-size: .7rem;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-    "skills__title skills__title skills__title  skills__title      skills__title   skills__title  skills__title  skills__title      skills__title  skills__title  skills__title   skills__title skills__title" 
-    "skills__css   skills__html  skills__django skills__javascript skills__mongodb skills__nextjs skills__nodejs skills__postgresql skills__python skills__python skills__reactjs skills__sass  skills__vscode";
+    "skill__title"
+    "skill__items__row1"
+    "skill__items__row2";
     
-    .skills__title {
-      grid-area: skills__title;
-      justify-self: center;
-      text-transform: uppercase;
-      font-size: 1.5rem;
+    .skill__title {
+        grid-area: skill__title;
+        justify-self: center;
+        font-size: .8rem;
     }
-    .skills__css {
-      grid-area: skills__css;
-      justify-self: center;
-      text-transform: uppercase;
+    .skill__items__row1 {
+        grid-area: skill__items__row1;
+        justify-self: center;
     }
-    .skills__html {
-      grid-area: skills__html;
-      justify-self: center;
-      text-transform: uppercase;
+    .skill__items__row2 {
+        grid-area: skill__items__row2;
+        justify-self: center;
     }
-    .skills__javascript {
-      grid-area: skills__javascript;
-      justify-self: center;
-      text-transform: uppercase;
-    }
-    .skills__mongodb {
-      grid-area: skills__mongodb;
-      justify-self: center;
-      text-transform: uppercase;
-    }
-    .skills__nextjs {
-      grid-area: skills__nextjs;
-      justify-self: center;
-      text-transform: uppercase;
-    }
-    .skills__nodejs {
-      grid-area: skills__nodejs;
-      justify-self: center;
-      text-transform: uppercase;
-    }
-    .skills__django {
-      grid-area: skills__django;
-      justify-self: center;
-      text-transform: uppercase;
-    }
-    .skills__postgresql {
-      grid-area: skills__postgresql;
-      justify-self: center;
-      text-transform: uppercase;
-    }
-    .skills__python {
-      grid-area: skills__python;
-      justify-self: center;
-      text-transform: uppercase;
-    }
-    .skills__reactjs {
-      grid-area: skills__reactjs;
-      justify-self: center;
-      text-transform: uppercase;
-    }
-    .skills__sass {
-      grid-area: skills__sass;
-      justify-self: center;
-      text-transform: uppercase;
-    }
-    .skills__vscode {
-      grid-area: skills__vscode;
-      justify-self: center;
-      text-transform: uppercase;
-    }
-
 }
  

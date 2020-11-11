@@ -1,0 +1,44 @@
+.pixabay_image_search {
+    display: grid;
+    gap: 1em;
+    padding: 1em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "pixabay_image_search__content pixabay_image_search__content pixabay_image_search__image";
+    
+    .pixabay_image_search__image {
+        grid-area: pixabay_image_search__image;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        width: 100%;
+    }
+   
+    .pixabay_image_search__content {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        grid-area: pixabay_image_search__content;
+        display: grid;
+        gap: 1em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "pixabay_image_search__content__title    pixabay_image_search__content__title"
+        "pixabay_image_search__content__details  pixabay_image_search__content__details"
+        "pixabay_image_search__content__live     pixabay_image_search__content__repo";
+    
+        .pixabay_image_search__content__title {
+            grid-area: pixabay_image_search__content__title;
+            place-self: center;
+        }
+        .pixabay_image_search__content__details {
+            grid-area: pixabay_image_search__content__details;
+            place-self: center;
+        }
+        .pixabay_image_search__content__live {
+            grid-area: pixabay_image_search__content__live;
+            place-self: center;
+        }
+        .pixabay_image_search__content__repo {
+            grid-area: pixabay_image_search__content__repo;
+            place-self: center;
+        }
+    }
+}

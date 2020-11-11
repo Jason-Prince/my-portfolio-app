@@ -1,0 +1,30 @@
+.accomplishments {
+    display: grid;
+    gap: 1em;
+    margin: 1em;
+    padding: 1em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+    "accomplishments__dod"
+    "accomplishments__lambda"
+    "accomplishments__uop";
+
+    
+    .accomplishments__dod {
+      grid-area: accomplishments__dod;
+      justify-self: center;
+      text-transform: uppercase;
+    }
+    .accomplishments__lambda {
+      grid-area: accomplishments__lambda;
+      justify-self: center;
+      text-transform: uppercase;
+    }
+    .accomplishments__uop {
+      grid-area: accomplishments__uop;
+      justify-self: center;
+      text-transform: uppercase;
+    }
+  }
