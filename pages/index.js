@@ -5,31 +5,55 @@ const home = () => {
     <div className="body">
       <div className="row">
         {/* intro */}
-        <div className="card">
-          <div className="content--center">Jason Prince</div>
-          <div className="content--center">Full Stack Web Developer</div>
+        <div className="section">
+          <div>Jason Prince</div>
+          <div>Full Stack Web Developer</div>
         </div>
         {/* projects */}
+        <div className="section">Projects</div>
+        {/* cooking with react */}
         <div className="card">
-          <div className="content--center">Coolking with React</div>
-          <div className="content--center">CRUD in React</div>
-          <div className="content--center">image here</div>
-        </div>
-        <div className="card">
-          <div className="content--center">Pixabay Image Search</div>
-          <div className="content--center">CRUD in React</div>
-          <div className="content--center">image here</div>
-        </div>
-        <div className="card">
-          <div className="content--center">Portfolio Site</div>
           <div className="content--center">
-            I needed a place to showcase my projects. I used a next js framework
-            and hosted from vercel. Styling in sass with a grid display and
-            organized with bem. Icons are svg and came from fontawesome.
+            <img
+              src="https://via.placeholder.com/400"
+              alt="cooking with react"
+            />
           </div>
-          <div className="content--center">image here</div>
+          <div className="content--left">live demo link</div>
+          <div className="content--left">
+            <span>Coolking with React</span>
+            <span>All about cooking with react</span>
+          </div>
+          <div className="content--left">github code link</div>
+        </div>
+        {/* pixabay image search */}
+        <div className="card">
+          <div className="content--center">
+            <img
+              src="https://via.placeholder.com/400"
+              alt="pixabay image search"
+            />
+          </div>
+          <div className="content--left">live demo link</div>
+          <div className="content--left">Pixabay Image Search</div>
+          <div className="content--left">github code link</div>
+        </div>
+        {/* web portfolio */}
+        <div className="card">
+          <div className="content--center">
+            <img src="https://via.placeholder.com/400" alt="web portfolio" />
+          </div>
+          <div className="content--left">live demo link</div>
+          <div className="content--left">
+            Portfolio Site I needed a place to showcase my projects. I used a
+            next js framework and hosted from vercel. Styling in sass with a
+            grid display and organized with bem. Icons are svg and came from
+            fontawesome.
+          </div>
+          <div className="content--left">github code link</div>
         </div>
         {/* accomplishments */}
+        <div className="section">Accomplishments</div>
         <div className="card">
           <div className="content--center">DOD Security Clearance: Secret</div>
           <div className="content--center">
@@ -38,6 +62,7 @@ const home = () => {
           <div className="content--center">University of Phoenix: BSIT</div>
         </div>
         {/* contact me */}
+        <div className="section">Contact Me</div>
         <div className="card">
           <div className="content--center">linkedin</div>
           <div className="content--center">github</div>
