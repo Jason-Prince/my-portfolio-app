@@ -13,6 +13,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
 }
 
 a {
@@ -58,15 +59,24 @@ a:hover {
             grid-template-rows: 2fr auto;
             grid-template-columns: 400px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            .content {
+                display: grid;
+                grid-template-rows: auto;
+                gap: .5em;
+                padding: .5em;
+            }
             .content--center {
                 display: grid;
                 place-items: center;
             }
             .content--left {
+                padding: 0 5px;
                 display: grid;
                 place-items: start;
             }
-            
+            .content--padding-left {
+                padding-left: 2em;
+            }
         }
     }
 }

@@ -19,12 +19,14 @@ const home = () => {
               alt="cooking with react"
             />
           </div>
-          <div className="content--left">live demo link</div>
-          <div className="content--left">
-            <span>Coolking with React</span>
-            <span>All about cooking with react</span>
+          <div className="content">
+            <div className="content--left">live demo link</div>
+            <div className="content--left">
+              <span>Coolking with React</span>
+              <span>All about cooking with react</span>
+            </div>
+            <div className="content--left">github code link</div>
           </div>
-          <div className="content--left">github code link</div>
         </div>
         {/* pixabay image search */}
         <div className="card">
@@ -34,40 +36,53 @@ const home = () => {
               alt="pixabay image search"
             />
           </div>
-          <div className="content--left">live demo link</div>
-          <div className="content--left">Pixabay Image Search</div>
-          <div className="content--left">github code link</div>
+          <div className="content">
+            <div className="content--left">live demo link</div>
+            <div className="content--left">Pixabay Image Search</div>
+            <div className="content--left">github code link</div>
+          </div>
         </div>
         {/* web portfolio */}
         <div className="card">
           <div className="content--center">
             <img src="https://via.placeholder.com/400" alt="web portfolio" />
           </div>
-          <div className="content--left">live demo link</div>
-          <div className="content--left">
-            Portfolio Site I needed a place to showcase my projects. I used a
-            next js framework and hosted from vercel. Styling in sass with a
-            grid display and organized with bem. Icons are svg and came from
-            fontawesome.
+          <div className="content">
+            <div className="content--left">live demo link</div>
+            <div className="content--left">
+              Portfolio Site I needed a place to showcase my projects. I used a
+              next js framework and hosted from vercel. Styling in sass with a
+              grid display and organized with bem. Icons are svg and came from
+              fontawesome.
+            </div>
+            <div className="content--left">github code link</div>
           </div>
-          <div className="content--left">github code link</div>
         </div>
         {/* accomplishments */}
         <div className="section">Accomplishments</div>
         <div className="card">
-          <div className="content--center">DOD Security Clearance: Secret</div>
-          <div className="content--center">
-            Lambda School: Full Stack Web Developer
+          <div className="content">
+            <div className="content--left">DOD Security Clearance</div>
+            <div className="content--left content--padding-left">Secret</div>
+            <div className="content--left">Lambda School</div>
+            <div className="content--left content--padding-left">
+              Full Stack Web Developer
+            </div>
+            <div className="content--left">University of Phoenix</div>
+            <div className="content--left content--padding-left">
+              Bachelor of Science in Information Technology
+            </div>
           </div>
-          <div className="content--center">University of Phoenix: BSIT</div>
         </div>
         {/* contact me */}
         <div className="section">Contact Me</div>
         <div className="card">
-          <div className="content--center">linkedin</div>
-          <div className="content--center">github</div>
-          <div className="content--center">phone</div>
-          <div className="content--center">email</div>
+          <div className="content">
+            <div className="content--center">linkedin</div>
+            <div className="content--center">github</div>
+            <div className="content--center">phone</div>
+            <div className="content--center">email</div>
+          </div>
         </div>
         {/* footer */}
         <div className="card">
