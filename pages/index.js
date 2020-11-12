@@ -115,14 +115,13 @@ const home = () => {
           </div>
         </div>
         {/* contact me */}
-        <div className="section">Contact Me</div>
         <div className="contact-me">
+          <div className="contact-me__title">Contact Me</div>
           <a
             className="github__profile"
             href="https://github.com/jason-prince"
             target="_blank"
           >
-            {/* <i className="fab fa-github-square github__icon"></i> */}
             <img className="github__icon" src="/github.png" alt="github logo" />
             <div className="github__text">Github Profile</div>
             <i className="fas fa-external-link-alt external-link__icon"></i>
@@ -132,7 +131,6 @@ const home = () => {
             href="https://www.linkedin.com/in/jason-c-prince/"
             target="_blank"
           >
-            {/* <i className="fab fa-linkedin linkedin__icon"></i> */}
             <img
               className="linkedin__icon"
               src="/linkedIn.png"
@@ -142,20 +140,16 @@ const home = () => {
             <i className="fas fa-external-link-alt external-link__icon"></i>
           </a>
           <div className="phone">
-            {/* <i className="fas fa-phone-square-alt phone__icon"></i> */}
             <img
               className="phone__icon"
               src="/google_voice_96dp.png"
               alt="phone"
             />
             <div className="phone__number">(415) 498-0783</div>
-            <i className="far fa-copy copy__icon"></i>
           </div>
           <div className="email">
-            {/* <i className="fas fa-envelope-square email__icon"></i> */}
             <img className="email__icon" src="/gmail.png" alt="gmail logo" />
             <div className="email__address">jason.c.prince@gmail.com</div>
-            <i className="far fa-copy copy__icon"></i>
           </div>
         </div>
         {/* footer */}
