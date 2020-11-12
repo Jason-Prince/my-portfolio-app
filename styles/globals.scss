@@ -14,6 +14,8 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
+    color: #7c8898;
+    background-color: #273040;
 }
 
 a {
@@ -40,173 +42,278 @@ a:hover {
 
 
 
-.body {
-    // display: grid;
-    // place-items: center;
-    .row {
+.body__column {
+    display: grid;
+    grid-template-columns: 1fr;
+    .body__rows { 
         display: grid;
-        gap: 1em;
-        place-items: center;
-        grid-template-rows: auto;
-        .section {
+        gap: 3em;
+        justify-self: center;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "banner"
+            "about-me"
+            "cooking"
+            "pixabay"
+            "portfolio"
+            "contact"
+            "footer";
+        .banner {
+            grid-area: banner;
+            display: grid;
+            grid-template-rows: 1fr;
+            .banner__splater {
+                width: 411px;
+            }
+        }
+        .about-me {
+            grid-area: about-me;
+        }
+        .cooking {
+            grid-area: cooking;
+            position: relative;
+            gap: 1em;
             display: grid;
             grid-template-rows: auto;
-            grid-template-columns: 400px;
-            place-items: center;
-        }
-        .contact-me {
-            display: grid;
-            padding: .5em;
-            gap: .5em;
-            place-items: center;
-            grid-template-columns: 400px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            grid-template-areas: 
-            "contact-me__title"
-            "github__profile" 
-            "linkedin__profile" 
-            "phone"
-            "email";
-            .contact-me__title {
-                grid-area: contact-me__title;
+            .cooking__blob {
+                width: 411px;
+                z-index: 0;
+                grid-row: 1 / 2;
+                grid-column: 1 / 2;
+                animation: blob 50s infinite;
+            }
+
+            .cooking__image {
+                width: 411px;
+                z-index: 1;
+                grid-row: 1 / 2;
+                grid-column: 1 / 2;
+            }
+            .cooking__title {
+                grid-row: 2;
+                color: white;
                 font-size: 2rem;
-                padding: .3em;
-                letter-spacing: .05em;
-
+                padding-left: 40px;
             }
-            .github__profile {
-                grid-area: github__profile;
-                display: grid;
-                gap: .5em;
-                grid-template-columns: auto 1fr auto;
-                grid-template-areas:
-                    "github__icon github__text external-link__icon";
-                .github__icon {
-                    grid-area: github__icon;
-                    width: 1.2em;
-                    color: #211F1F;
-                }
-                .github__text {
-                    grid-area: github__text;
-                    color: black;
-                    font-size: 1.1rem;
-                }
-                .external-link__icon {
-                    grid-area: external-link__icon;
-                    font-size: .7em;
-                    color: gray;
-                }
-            }
-            .linkedin__profile {
-                grid-area: linkedin__profile;
-                display: grid;
-                gap: .5em;
-                grid-template-columns: auto 1fr auto;
-                grid-template-areas:
-                    "linkedin__icon linkedin__text external-link__icon";
-                .linkedin__icon {
-                    grid-area: linkedin__icon;
-                    width: 1.3em;
-                    color: #0077B5;
-                }
-                .linkedin__text {
-                    grid-area: linkedin__text;
-                    color: black;
-                    font-size: 1.1rem;
-                }
-                .external-link__icon {
-                    grid-area: external-link__icon;
-                    font-size: .7em;
-                    color: gray;
-                    
-                }
-            }
-            .email {
-                grid-area: email;
-                display: grid;
-                gap: .5em;
-                grid-template-columns: auto 1fr auto;
-                grid-template-areas:
-                    "email__icon email__address copy__icon";
-                .email__icon {
-                    grid-area: email__icon;
-                    width: 1.2em;
-                    color: #4285F4;
-                }
-                .email__address {
-                    grid-area: email__address;
-                    font-size: 1.1rem;
-                }
-                .copy__icon {
-                    grid-area: copy__icon;
-                    font-size: .7em;
-                    color: gray;
-                }
-            }
-            .phone {
-                grid-area: phone;
-                display: grid;
-                gap: .5em;
-                grid-template-columns: auto 1fr auto;
-                grid-template-areas:
-                    "phone__icon phone__address copy__icon";
-                .phone__icon {
-                    grid-area: phone__icon;
-                    width: 1.1em;
-                    color: #4285F4;
-                }
-                .phone__address {
-                    grid-area: phone__number;
-                    font-size: 1.1rem;
-                }
-                .copy__icon {
-                    grid-area: copy__icon;
-                    font-size: .7em;
-                    color: gray;
-                }
-            }
-        }
-        .card {
-            display: grid;
-            grid-template-rows: 2fr auto;
-            grid-template-columns: 400px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            .content {
-                display: grid;
-                grid-template-rows: auto;
-                gap: .5em;
-                padding: .5em;
-            }
-            .content--center {
-                display: grid;
-                place-items: center;
-            }
-            .content--left {
-                padding: 0 5px;
-                display: grid;
-                place-items: start;
-            }
-            .content--padding-left {
-                padding-left: 2em;
-            }
-            .link__container {
-                display: grid;
-                grid-template-columns: repeat(2, auto) 1fr;
-                gap: .6em;
-                color: black;
-            }
-            
-            .link__container:hover {
-                text-decoration: underline;
-            }
-
-            .icon--small {
-                font-size: .6em;
+            .cooking__content {
+                grid-row: 3;
+                padding-left: 40px;
                 
             }
-            .icon--large {
-                font-size: 1em;
+            .cooking__demo {
+                grid-row: 4;
+                padding-left: 40px;
+                color: #00E5EA;
+            }
+            .cooking__code {
+                grid-row: 5;
+                padding-left: 40px;
+                color: #00E5EA;
             }
         }
+        .pixabay {
+            grid-area: pixabay;
+        }
+        .portfolio {
+            grid-area: portfolio;
+        }
+        .contact {
+            grid-area: contact;
+        }
+        .footer {
+            grid-area: footer;
+        }
+
+
+        // .section {
+        //     display: grid;
+        //     grid-template-rows: auto;
+        //     grid-template-columns: 400px;
+        //     place-items: center;
+        // }
+        // .contact-me {
+        //     display: grid;
+        //     padding: .5em;
+        //     gap: .5em;
+        //     place-items: center;
+        //     grid-template-columns: 400px;
+        //     box-shadow: 0 0 150px #000000a6;
+        //     grid-template-areas: 
+        //     "contact-me__title"
+        //     "github__profile" 
+        //     "linkedin__profile" 
+        //     "phone"
+        //     "email";
+        //     .contact-me__title {
+        //         grid-area: contact-me__title;
+        //         font-size: 2rem;
+        //         padding: .3em;
+        //         letter-spacing: .05em;
+
+        //     }
+        //     .github__profile {
+        //         grid-area: github__profile;
+        //         display: grid;
+        //         gap: .5em;
+        //         grid-template-columns: auto 1fr auto;
+        //         grid-template-areas:
+        //             "github__icon github__text external-link__icon";
+        //         .github__icon {
+        //             grid-area: github__icon;
+        //             width: 1.2em;
+        //             color: #211F1F;
+        //         }
+        //         .github__text {
+        //             grid-area: github__text;
+        //             color: black;
+        //             font-size: 1.1rem;
+        //         }
+        //         .external-link__icon {
+        //             grid-area: external-link__icon;
+        //             font-size: .7em;
+        //             color: gray;
+        //         }
+        //     }
+        //     .linkedin__profile {
+        //         grid-area: linkedin__profile;
+        //         display: grid;
+        //         gap: .5em;
+        //         grid-template-columns: auto 1fr auto;
+        //         grid-template-areas:
+        //             "linkedin__icon linkedin__text external-link__icon";
+        //         .linkedin__icon {
+        //             grid-area: linkedin__icon;
+        //             width: 1.3em;
+        //             color: #0077B5;
+        //         }
+        //         .linkedin__text {
+        //             grid-area: linkedin__text;
+        //             color: black;
+        //             font-size: 1.1rem;
+        //         }
+        //         .external-link__icon {
+        //             grid-area: external-link__icon;
+        //             font-size: .7em;
+        //             color: gray;
+                    
+        //         }
+        //     }
+        //     .email {
+        //         grid-area: email;
+        //         display: grid;
+        //         gap: .5em;
+        //         grid-template-columns: auto 1fr auto;
+        //         grid-template-areas:
+        //             "email__icon email__address copy__icon";
+        //         .email__icon {
+        //             grid-area: email__icon;
+        //             width: 1.2em;
+        //             color: #4285F4;
+        //         }
+        //         .email__address {
+        //             grid-area: email__address;
+        //             font-size: 1.1rem;
+        //         }
+        //         .copy__icon {
+        //             grid-area: copy__icon;
+        //             font-size: .7em;
+        //             color: gray;
+        //         }
+        //     }
+        //     .phone {
+        //         grid-area: phone;
+        //         display: grid;
+        //         gap: .5em;
+        //         grid-template-columns: auto 1fr auto;
+        //         grid-template-areas:
+        //             "phone__icon phone__address copy__icon";
+        //         .phone__icon {
+        //             grid-area: phone__icon;
+        //             width: 1.1em;
+        //             color: #4285F4;
+        //         }
+        //         .phone__address {
+        //             grid-area: phone__number;
+        //             font-size: 1.1rem;
+        //         }
+        //         .copy__icon {
+        //             grid-area: copy__icon;
+        //             font-size: .7em;
+        //             color: gray;
+        //         }
+        //     }
+        // }
+        // .footer {
+        //     display: grid;
+        //     color: gray;
+        //     font-size: .8rem;
+        //     gap: .2em;
+        //     margin-bottom: 1em;
+        //     grid-template-columns: auto 1fr;
+        //     grid-template-areas:
+        //         "footer__icon footer__text";
+        //     .footer__icon {
+        //         grid-area: footer__icon;
+        //         width: 1.2em;
+        //     }
+        //     .footer__text {
+        //         grid-area: footer__text;
+        //     }
+        // }
+        // .cooking {
+        //     display: grid;
+
+        // }
+        // .card {
+        //     display: grid;
+        //     grid-template-rows: 2fr auto;
+        //     grid-template-columns: 400px;
+        //     box-shadow: 0 0 150px #000000a6;
+        //     .content {
+        //         display: grid;
+        //         grid-template-rows: auto;
+        //         gap: .5em;
+        //         padding: .5em;
+        //     }
+        //     .content--center {
+        //         display: grid;
+        //         place-items: center;
+        //     }
+        //     .content--left {
+        //         padding: 0 5px;
+        //         display: grid;
+        //         place-items: start;
+        //     }
+        //     .content--padding-left {
+        //         padding-left: 2em;
+        //     }
+        //     .link__container {
+        //         display: grid;
+        //         grid-template-columns: repeat(2, auto) 1fr;
+        //         gap: .6em;
+        //         color: black;
+        //     }
+            
+        //     .link__container:hover {
+        //         text-decoration: underline;
+        //     }
+
+        //     .icon--small {
+        //         font-size: .6em;
+                
+        //     }
+        //     .icon--large {
+        //         font-size: 1em;
+        //     }
+        // }
     }
+}
+@keyframes blob {
+    50% {
+        transform: rotate(360deg);
+    }
+}
+
+.image-400px {
+    width: 400px;
 }
