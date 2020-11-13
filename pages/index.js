@@ -5,7 +5,26 @@ const home = () => {
     <div className="body__column">
       <div className="body__rows">
         <div className="banner">
-          <img className="banner__splater" src="/plane.png" alt="spater" />
+          <img className="banner__arizona" src="/arizona.png" alt="splat" />
+          <svg
+            className="banner__blob"
+            viewBox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill="#00E5EA"
+              d="M42.5,-74.9C55.2,-66.2,65.9,-55.2,75.1,-42.4C84.3,-29.5,91.9,-14.8,92.2,0.1C92.4,15,85.2,30,76.4,43.5C67.6,57,57.1,68.9,44.1,77.3C31.1,85.8,15.5,90.8,-0.3,91.3C-16.1,91.8,-32.2,87.7,-46.1,79.8C-60,71.8,-71.7,60,-79.2,46C-86.7,32.1,-90,16,-89,0.6C-87.9,-14.8,-82.5,-29.7,-75,-43.6C-67.4,-57.5,-57.8,-70.4,-44.9,-79.1C-32.1,-87.7,-16,-92.1,-0.6,-91C14.8,-90,29.7,-83.6,42.5,-74.9Z"
+              transform="translate(100 100)"
+            />
+          </svg>
+
+          <img className="banner__plane" src="/plane.png" alt="spater" />
+          <div className="banner__text">
+            <i className="fas fa-chevron-left left"></i>
+            <div className="web-developer">Web Devloper</div>
+            <i class="fas fa-chevron-right right"></i>
+          </div>
+          <i class="fas fa-long-arrow-alt-down banner__scroll"></i>
         </div>
         <div className="about-me">about me</div>
         <div className="cooking">

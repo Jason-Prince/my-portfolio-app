@@ -61,9 +61,72 @@ a:hover {
         .banner {
             grid-area: banner;
             display: grid;
+            gap: 2em;
             grid-template-rows: 1fr;
-            .banner__splater {
+            position: relative;
+            height: 100vh;
+            .banner__plane {
+                z-index: 1;
+                place-self: center;
                 width: 411px;
+                grid-row: 1;
+                grid-column: 1;
+                animation: plane 15s infinite;
+            }
+            .banner__blob {
+                z-index: -1;
+                place-self: center;
+                padding-top: 40px;
+                width: 411px;
+                grid-row: 1;
+                grid-column: 1;
+                animation: blob 50s infinite;
+            }.banner__arizona {
+                z-index: 0;
+                place-self: center;
+                padding-top: 100px;
+                width: 411px;
+                grid-row: 1;
+                grid-column: 1;
+            }
+            .banner__text {
+                z-index: 2;
+                place-self: center;
+                grid-row: 1;
+                grid-column: 1;
+                color: white;
+                font-size: 3rem;
+                justify-self: center;
+                display: grid;
+                grid-template-columns: auto auto auto;
+                
+                grid-template-areas:
+                    "left web-developer right";
+                .left {
+                    grid-area: left;
+                    place-self: center;
+                    animation: left 2s;
+                } 
+                .web-developer {
+                    grid-area: web-developer;
+                    place-self: center;
+                    opacity: 0;
+                    animation: web-dev 2s 2s forwards;
+                } 
+                .right {
+                    grid-area: right;
+                    place-self: center;
+                    animation: right 2s;
+                }
+                
+            }
+            .banner__scroll {
+                font-size: 2em;
+                color: #00E5EA;
+                grid-row: 2;
+                grid-column: 1;
+                place-self: center;
+                animation: bounce 2s infinite;
             }
         }
         .about-me {
@@ -80,7 +143,7 @@ a:hover {
                 z-index: 0;
                 grid-row: 1 / 2;
                 grid-column: 1 / 2;
-                animation: blob 50s infinite;
+                animation: blob 30s infinite;
             }
 
             .cooking__image {
@@ -123,6 +186,71 @@ a:hover {
         .footer {
             grid-area: footer;
         }
+    }
+}
+@keyframes blob {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+@keyframes plane {
+    50% {
+        transform: translateY(30px);
+    }
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+@keyframes left {
+    0% {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes right {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes web-dev {
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+.image-400px {
+    width: 400px;
+}
+
+
+
+
+
+
 
 
         // .section {
@@ -306,14 +434,3 @@ a:hover {
         //         font-size: 1em;
         //     }
         // }
-    }
-}
-@keyframes blob {
-    50% {
-        transform: rotate(360deg);
-    }
-}
-
-.image-400px {
-    width: 400px;
-}
