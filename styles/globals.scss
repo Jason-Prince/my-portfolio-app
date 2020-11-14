@@ -1,14 +1,5 @@
 @import 'normalize';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-// @import 'home';
-// @import 'header';
-// @import 'skills';
-// @import 'web_portfolio';
-// @import 'pixabay_image_search';
-// @import 'cooking_with_react';
-// @import 'accomplishments';
-// @import 'contact_me';
-// @import 'footer';
 
 
 body {
@@ -16,6 +7,7 @@ body {
     font-size: 16px;
     color: #7c8898;
     background-color: #273040;
+    box-sizing: border-box;
 }
 
 a {
@@ -24,23 +16,6 @@ a {
 a:hover {
     text-decoration: underline;
 }
-
-.menu-icon {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-        "menu-bars menu-x";
-    .menu-bars {
-        grid-area: menu-bars;
-        justify-self: end;
-    }
-    .menu-x {
-        grid-area: menu-x;
-
-    }
-}
-
-
 
 .body__column {
     display: grid;
@@ -71,7 +46,7 @@ a:hover {
                 width: 411px;
                 grid-row: 1;
                 grid-column: 1;
-                animation: plane 15s infinite;
+                
             }
             .banner__blob {
                 z-index: -1;
@@ -80,7 +55,7 @@ a:hover {
                 width: 411px;
                 grid-row: 1;
                 grid-column: 1;
-                animation: blob 50s infinite;
+                
             }.banner__arizona {
                 z-index: 0;
                 place-self: center;
@@ -102,40 +77,63 @@ a:hover {
                 
                 grid-template-areas:
                     "left web-developer right";
-                .left {
+                .left-chevron {
                     grid-area: left;
                     place-self: center;
-                    animation: left 2s;
+                    
                 } 
                 .web-developer {
                     grid-area: web-developer;
                     place-self: center;
                     opacity: 0;
-                    animation: web-dev 2s 2s forwards;
+                    
                 } 
-                .right {
+                .right-chevron {
                     grid-area: right;
                     place-self: center;
-                    animation: right 2s;
+                    
                 }
                 
             }
-            .banner__scroll {
+            .banner__arrow {
                 font-size: 2em;
                 color: #00E5EA;
                 grid-row: 2;
                 grid-column: 1;
                 place-self: center;
-                animation: bounce 2s infinite;
+                
             }
         }
         .about-me {
             grid-area: about-me;
+            justify-self: center;
+            box-shadow: 0 0 150px #000000a6;
+            display: grid;
+            gap: 1em;
+            padding: 1em 2em;
+            grid-template-rows: auto auto;
+            grid-template-columns: 411px;
+            grid-template-areas:
+                "about-me__title"
+                "about-me__content";
+            .about-me__title {
+                grid-area: about-me__title;
+                font-size: 3rem;
+                color: white;
+                text-align: center;
+            }
+            .about-me__content {
+                grid-template-rows: about-me__content;
+                font-size: 2rem;
+                color: white;
+                text-align: center;
+            }
         }
         .cooking {
             grid-area: cooking;
             position: relative;
             gap: 1em;
+            place-self: center;
             display: grid;
             grid-template-rows: auto;
             .cooking__blob {
@@ -188,7 +186,37 @@ a:hover {
         }
     }
 }
-@keyframes blob {
+
+/*--------------------------- 
+         ANIMATIONS 
+---------------------------*/
+
+/*---- fade-in ----*/
+.hide-me {
+    opacity: 0;
+}
+.fade-in {
+    animation: fade-in ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: .5s;
+    
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+/*---- blob--rotate ----*/
+.blob--rotate {
+    animation: blob--rotate 50s infinite;
+}
+@keyframes blob--rotate {
     0% {
         transform: rotate(0deg);
     }
@@ -196,12 +224,28 @@ a:hover {
         transform: rotate(359deg);
     }
 }
-@keyframes plane {
+
+/*---- plane--loat ----*/
+.plane--float {
+    animation: plane--float 5s ease-in-out infinite;
+}
+@keyframes plane--float {
+    0% {
+      transform: translateY(0px);  
+    }
     50% {
-        transform: translateY(30px);
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
     }
 }
-@keyframes bounce {
+
+/*---- arrow--bounce ----*/
+.arrow--bounce {
+    animation: arrow--bounce 2s infinite;
+}
+@keyframes arrow--bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
     }
@@ -212,7 +256,12 @@ a:hover {
         transform: translateY(-15px);
     }
 }
-@keyframes left {
+
+/*---- left-chevron--move-left ----*/
+.left-chevron--move-left {
+    animation: left-chevron--move-left 2s;
+}
+@keyframes left-chevron--move-left {
     0% {
         opacity: 0;
         transform: translateX(200px);
@@ -222,7 +271,12 @@ a:hover {
         opacity: 1;
     }
 }
-@keyframes right {
+
+/*---- right-chevron--move-right ----*/
+.right-chevron--move-right {
+    animation: right-chevron--move-right 2s;
+}
+@keyframes right-chevron--move-right {
     0% {
         opacity: 0;
         transform: translateX(-200px);
@@ -232,7 +286,12 @@ a:hover {
         opacity: 1;
     }
 }
-@keyframes web-dev {
+
+/*---- web-developer--fade-in ----*/
+.web-developer--fade-in {
+    animation: web-developer--fade-in 2s 2s forwards;
+}
+@keyframes web-developer--fade-in {
     100% {
         opacity: 1;
     }
@@ -242,9 +301,6 @@ a:hover {
 
 
 
-.image-400px {
-    width: 400px;
-}
 
 
 

@@ -7,7 +7,7 @@ const home = () => {
         <div className="banner">
           <img className="banner__arizona" src="/arizona.png" alt="splat" />
           <svg
-            className="banner__blob"
+            className="banner__blob blob--rotate"
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -18,15 +18,27 @@ const home = () => {
             />
           </svg>
 
-          <img className="banner__plane" src="/plane.png" alt="spater" />
+          <img
+            className="banner__plane plane--float"
+            src="/plane.png"
+            alt="spater"
+          />
           <div className="banner__text">
-            <i className="fas fa-chevron-left left"></i>
-            <div className="web-developer">Web Devloper</div>
-            <i class="fas fa-chevron-right right"></i>
+            <i className="fas fa-chevron-left left-chevron left-chevron--move-left"></i>
+            <div className="web-developer web-developer--fade-in">
+              Web Devloper
+            </div>
+            <i class="fas fa-chevron-right right-chevron right-chevron--move-right"></i>
           </div>
-          <i class="fas fa-long-arrow-alt-down banner__scroll"></i>
+          <i class="fas fa-long-arrow-alt-down banner__arrow arrow--bounce"></i>
         </div>
-        <div className="about-me">about me</div>
+        <div className="about-me">
+          <div className="about-me__title">Hello, I'm Jason</div>
+          <div className="about-me__content">
+            I'm a web developer who left Arizona for Utah in 2017. I'm a recent
+            graduate from Lamba School in their Full Stack Web Devloper track.
+          </div>
+        </div>
         <div className="cooking">
           <svg
             className="cooking__blob"
