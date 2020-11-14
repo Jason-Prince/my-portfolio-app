@@ -20,6 +20,16 @@ a:hover {
 .body__column {
     display: grid;
     grid-template-columns: 1fr;
+    .position-fixed-center {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        .plane {
+            width: 411px;
+        }
+    }
     .body__rows { 
         display: grid;
         gap: 3em;
@@ -40,14 +50,6 @@ a:hover {
             grid-template-rows: 1fr;
             position: relative;
             height: 100vh;
-            .banner__plane {
-                z-index: 1;
-                place-self: center;
-                width: 411px;
-                grid-row: 1;
-                grid-column: 1;
-                
-            }
             .banner__blob {
                 z-index: -1;
                 place-self: center;
@@ -190,27 +192,6 @@ a:hover {
 /*--------------------------- 
          ANIMATIONS 
 ---------------------------*/
-
-/*---- fade-in ----*/
-.hide-me {
-    opacity: 0;
-}
-.fade-in {
-    animation: fade-in ease-in 1;
-    animation-fill-mode: forwards;
-    animation-duration: .5s;
-    
-}
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-        transform: translate(0px, 40px);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(0px, 0px);
-    }
-}
 
 /*---- blob--rotate ----*/
 .blob--rotate {

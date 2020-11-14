@@ -3,6 +3,9 @@ import { text } from "@fortawesome/fontawesome-svg-core";
 const home = () => {
   return (
     <div className="body__column">
+      <div className="position-fixed-center">
+        <img className="plane plane--float" src="/plane.png" alt="spater" />
+      </div>
       <div className="body__rows">
         <div className="banner">
           <img className="banner__arizona" src="/arizona.png" alt="splat" />
@@ -17,12 +20,6 @@ const home = () => {
               transform="translate(100 100)"
             />
           </svg>
-
-          <img
-            className="banner__plane plane--float"
-            src="/plane.png"
-            alt="spater"
-          />
           <div className="banner__text">
             <i className="fas fa-chevron-left left-chevron left-chevron--move-left"></i>
             <div className="web-developer web-developer--fade-in">
