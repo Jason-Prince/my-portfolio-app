@@ -1,13 +1,20 @@
 @import 'normalize';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+/*--------------------------- 
+           COLORS 
+---------------------------*/
+$charcoal: #233D4D; // background
+$sizzling-red: #F2545B; // blobs
+$lavender-blush: #EEE5E9; // text
+$middle-blue-purple: #8D86C9;
+$cyber-yello: #FFD400; // links
 
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    color: #7c8898;
-    background-color: #273040;
-    box-sizing: border-box;
+    color: $lavender-blush;
+    background-color: $charcoal;
 }
 
 a {
@@ -17,187 +24,135 @@ a:hover {
     text-decoration: underline;
 }
 
-.body__column {
+
+
+.body {
     display: grid;
     grid-template-columns: 1fr;
-    .position-fixed-center {
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        .plane {
-            width: 411px;
+    grid-template-rows: 1fr;
+    justify-self: center;
+    &__car {
+        width: 100px;
+        &--center-fixed {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
         }
     }
-    .body__rows { 
-        display: grid;
-        gap: 3em;
-        justify-self: center;
-        grid-template-rows: 1fr;
-        grid-template-areas:
-            "banner"
-            "about-me"
-            "cooking"
-            "pixabay"
-            "portfolio"
-            "contact"
-            "footer";
-        .banner {
-            grid-area: banner;
-            display: grid;
-            gap: 2em;
-            grid-template-rows: 1fr;
-            position: relative;
-            height: 100vh;
-            .banner__blob {
-                z-index: -1;
-                place-self: center;
-                padding-top: 40px;
-                width: 411px;
-                grid-row: 1;
-                grid-column: 1;
-                
-            }.banner__arizona {
-                z-index: 0;
-                place-self: center;
-                padding-top: 100px;
-                width: 411px;
-                grid-row: 1;
-                grid-column: 1;
-            }
-            .banner__text {
-                z-index: 2;
-                place-self: center;
-                grid-row: 1;
-                grid-column: 1;
-                color: white;
-                font-size: 3rem;
-                justify-self: center;
-                display: grid;
-                grid-template-columns: auto auto auto;
-                
-                grid-template-areas:
-                    "left web-developer right";
-                .left-chevron {
-                    grid-area: left;
-                    place-self: center;
-                    
-                } 
-                .web-developer {
-                    grid-area: web-developer;
-                    place-self: center;
-                    opacity: 0;
-                    
-                } 
-                .right-chevron {
-                    grid-area: right;
-                    place-self: center;
-                    
-                }
-                
-            }
-            .banner__arrow {
-                font-size: 2em;
-                color: #00E5EA;
-                grid-row: 2;
-                grid-column: 1;
-                place-self: center;
-                
+    &__row-1 {
+        grid-row: 1;
+        grid-column: 1;
+        width: 411px;
+        place-self: center;
+        height: 100vh;
+        &__blob {
+            z-index: -1;
+            &--rotate {
+                animation: rotate 50s infinite;
             }
         }
-        .about-me {
-            grid-area: about-me;
-            justify-self: center;
-            box-shadow: 0 0 150px #000000a6;
-            display: grid;
-            gap: 1em;
-            padding: 1em 2em;
-            grid-template-rows: auto auto;
-            grid-template-columns: 411px;
-            grid-template-areas:
-                "about-me__title"
-                "about-me__content";
-            .about-me__title {
-                grid-area: about-me__title;
-                font-size: 3rem;
-                color: white;
-                text-align: center;
+        &__arizona {
+            z-index: 0;
+            width: 300px;
+        }
+        &__left-chevron {
+            font-size: 3rem;
+            opacity: 0;
+            z-index: 2;
+            &--move-left {
+                animation: move-left 2s forwards;
             }
-            .about-me__content {
-                grid-template-rows: about-me__content;
-                font-size: 2rem;
-                color: white;
-                text-align: center;
+        } 
+        &__text {
+            font-size: 3rem;
+            opacity: 0;
+            text-align: center;
+            &--fade-in {
+                animation: fade-in 2s 2s forwards;
+            }
+        } 
+        &__right-chevron {
+            font-size: 3rem;
+            opacity: 0;
+            z-index: 2;
+            &--move-right {
+                animation: move-right 2s forwards;
             }
         }
-        .cooking {
-            grid-area: cooking;
-            position: relative;
-            gap: 1em;
-            place-self: center;
-            display: grid;
-            grid-template-rows: auto;
-            .cooking__blob {
-                width: 411px;
-                z-index: 0;
-                grid-row: 1 / 2;
-                grid-column: 1 / 2;
-                animation: blob 30s infinite;
-            }
-
-            .cooking__image {
-                width: 411px;
-                z-index: 1;
-                grid-row: 1 / 2;
-                grid-column: 1 / 2;
-            }
-            .cooking__title {
-                grid-row: 2;
-                color: white;
-                font-size: 2rem;
-                padding-left: 40px;
-            }
-            .cooking__content {
-                grid-row: 3;
-                padding-left: 40px;
-                
-            }
-            .cooking__demo {
-                grid-row: 4;
-                padding-left: 40px;
-                color: #00E5EA;
-            }
-            .cooking__code {
-                grid-row: 5;
-                padding-left: 40px;
-                color: #00E5EA;
+        &__arrow {
+            font-size: 2em;
+            color: $sizzling-red;
+            &--bounce {
+                animation: bounce 2s infinite;
             }
         }
-        .pixabay {
-            grid-area: pixabay;
-        }
-        .portfolio {
-            grid-area: portfolio;
-        }
-        .contact {
-            grid-area: contact;
-        }
-        .footer {
-            grid-area: footer;
-        }
+    }
+    .about-me__title {
+        grid-row: 3;
+        grid-column: 1;
+        font-size: 3rem;
+        text-align: center;
+        box-shadow: 0 0 150px #000000a6;
+    }
+    .about-me__content {
+        grid-row: 3;
+        grid-column: 1;
+        font-size: 2rem;
+        text-align: center;
+    }
+    .cooking__blob {
+        grid-row: 4;
+        grid-column: 1;
+        z-index: 0;
+    }
+    .cooking__image {
+        grid-row: 4;
+        grid-column: 1;
+        width: 100%;
+        z-index: 1;
+    }
+    .cooking__title {
+        grid-row: 4;
+        grid-column: 1;
+        font-size: 2rem;
+    }
+    .cooking__content {
+        grid-row: 4;
+        grid-column: 1;
+    }
+    .cooking__demo {
+        grid-row: 4;
+        grid-column: 1;
+    }
+    .cooking__code {
+        grid-row: 4;
+        grid-column: 1;
+    }
+    .pixabay {
+        grid-row: 5;
+        grid-column: 1;
+    }
+    .portfolio {
+        grid-row: 6;
+        grid-column: 1;
+    }
+    .contact {
+        grid-row: 7;
+        grid-column: 1;
+    }
+    .footer {
+        grid-row: 8;
+        grid-column: 1;
     }
 }
+
 
 /*--------------------------- 
          ANIMATIONS 
 ---------------------------*/
-
-/*---- blob--rotate ----*/
-.blob--rotate {
-    animation: blob--rotate 50s infinite;
-}
-@keyframes blob--rotate {
+@keyframes rotate {
     0% {
         transform: rotate(0deg);
     }
@@ -205,28 +160,7 @@ a:hover {
         transform: rotate(359deg);
     }
 }
-
-/*---- plane--loat ----*/
-.plane--float {
-    animation: plane--float 5s ease-in-out infinite;
-}
-@keyframes plane--float {
-    0% {
-      transform: translateY(0px);  
-    }
-    50% {
-      transform: translateY(-20px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-}
-
-/*---- arrow--bounce ----*/
-.arrow--bounce {
-    animation: arrow--bounce 2s infinite;
-}
-@keyframes arrow--bounce {
+@keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
     }
@@ -237,42 +171,26 @@ a:hover {
         transform: translateY(-15px);
     }
 }
-
-/*---- left-chevron--move-left ----*/
-.left-chevron--move-left {
-    animation: left-chevron--move-left 2s;
-}
-@keyframes left-chevron--move-left {
+@keyframes move-left {
     0% {
-        opacity: 0;
-        transform: translateX(200px);
+        transform: translateX(0);
+
     }
     100% {
-        transform: translateX(0px);
+        transform: translateX(-190px);
         opacity: 1;
     }
 }
-
-/*---- right-chevron--move-right ----*/
-.right-chevron--move-right {
-    animation: right-chevron--move-right 2s;
-}
-@keyframes right-chevron--move-right {
+@keyframes move-right {
     0% {
-        opacity: 0;
-        transform: translateX(-200px);
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(0px);
+        transform: translateX(190px);
         opacity: 1;
     }
 }
-
-/*---- web-developer--fade-in ----*/
-.web-developer--fade-in {
-    animation: web-developer--fade-in 2s 2s forwards;
-}
-@keyframes web-developer--fade-in {
+@keyframes fade-in {
     100% {
         opacity: 1;
     }

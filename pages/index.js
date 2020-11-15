@@ -1,69 +1,79 @@
-import { text } from "@fortawesome/fontawesome-svg-core";
-
 const home = () => {
   return (
-    <div className="body__column">
-      <div className="position-fixed-center">
-        <img className="plane plane--float" src="/plane.png" alt="spater" />
-      </div>
-      <div className="body__rows">
-        <div className="banner">
-          <img className="banner__arizona" src="/arizona.png" alt="splat" />
-          <svg
-            className="banner__blob blob--rotate"
-            viewBox="0 0 200 200"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill="#00E5EA"
-              d="M42.5,-74.9C55.2,-66.2,65.9,-55.2,75.1,-42.4C84.3,-29.5,91.9,-14.8,92.2,0.1C92.4,15,85.2,30,76.4,43.5C67.6,57,57.1,68.9,44.1,77.3C31.1,85.8,15.5,90.8,-0.3,91.3C-16.1,91.8,-32.2,87.7,-46.1,79.8C-60,71.8,-71.7,60,-79.2,46C-86.7,32.1,-90,16,-89,0.6C-87.9,-14.8,-82.5,-29.7,-75,-43.6C-67.4,-57.5,-57.8,-70.4,-44.9,-79.1C-32.1,-87.7,-16,-92.1,-0.6,-91C14.8,-90,29.7,-83.6,42.5,-74.9Z"
-              transform="translate(100 100)"
-            />
-          </svg>
-          <div className="banner__text">
-            <i className="fas fa-chevron-left left-chevron left-chevron--move-left"></i>
-            <div className="web-developer web-developer--fade-in">
-              Web Devloper
-            </div>
-            <i class="fas fa-chevron-right right-chevron right-chevron--move-right"></i>
-          </div>
-          <i class="fas fa-long-arrow-alt-down banner__arrow arrow--bounce"></i>
-        </div>
-        <div className="about-me">
-          <div className="about-me__title">Hello, I'm Jason</div>
-          <div className="about-me__content">
-            I'm a web developer who left Arizona for Utah in 2017. I'm a recent
-            graduate from Lamba School in their Full Stack Web Devloper track.
-          </div>
-        </div>
-        <div className="cooking">
-          <svg
-            className="cooking__blob"
-            viewBox="0 0 200 200"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill="#00E5EA"
-              d="M41.9,-75C53.9,-65.6,63.1,-53.6,72,-40.7C80.8,-27.8,89.4,-13.9,91.1,1C92.9,15.9,87.7,31.8,78.7,44.4C69.6,57,56.6,66.3,42.8,74.6C29.1,83,14.5,90.4,-0.8,91.8C-16.1,93.2,-32.3,88.5,-43.7,78.8C-55.1,69.1,-61.9,54.4,-67.7,40.4C-73.5,26.4,-78.3,13.2,-78.3,0C-78.3,-13.2,-73.4,-26.4,-67.4,-40C-61.4,-53.6,-54.2,-67.5,-42.8,-77.3C-31.4,-87.1,-15.7,-92.7,-0.4,-92.1C14.9,-91.4,29.8,-84.5,41.9,-75Z"
-              transform="translate(100 100)"
-            />
-          </svg>
-
-          <img
-            className="cooking__image"
-            src="/Cooking-With-React.png"
-            alt="placeholder"
+    <div className="body">
+      <img
+        className="body body__car body__car--center-fixed"
+        src="/car.png"
+        alt="car"
+      />
+      <svg
+        className="body body__row-1 body__row-1__arizona"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns="http://www.w3.org/1999/xlink"
+        viewBox="0 0 1000 1000"
+        enable-background="new 0 0 1000 1000"
+        xml="preserve"
+      >
+        <g transform="translate(0.000000,511.000000) scale(0.100000,-0.100000)">
+          <path
+            fill="#233D4D"
+            d="M3125,4984.4c0-12.8-44.7-298.3-98-630.6c-93.7-588-100.1-611.4-172.6-722.2c-72.4-108.6-81-112.9-168.3-112.9c-89.5,0-95.9,4.3-127.8,85.2c-38.3,95.9-83.1,127.8-174.7,127.8c-34.1,0-78.8,19.2-100.1,42.6c-51.1,55.4-91.6,53.3-206.7-10.7l-95.9-53.3l-12.8-336.6c-6.4-183.2-23.4-524.1-36.2-756.3c-21.3-387.7-27.7-430.4-74.6-500.7c-27.7-44.7-59.6-130-72.4-191.7c-23.4-110.8-23.4-112.9,81-298.3c78.8-142.7,110.8-232.2,142.7-385.6c34.1-170.4,49-210.9,106.5-266.3c55.4-55.4,66-78.8,57.5-140.6c-12.8-87.4-53.3-125.7-240.7-221.6c-76.7-40.5-164-100.1-196-134.2c-83.1-87.3-157.7-289.7-185.3-496.4c-23.4-172.6-27.7-183.2-121.4-279.1c-53.3-55.4-127.8-108.7-164-119.3l-68.2-19.2l-23.4-274.8c-14.9-151.3-21.3-287.6-14.9-302.5c6.4-14.9,68.2-32,138.5-40.5l127.8-14.9l-12.8-91.6c-6.4-51.1-38.4-132.1-68.2-179c-55.4-83.1-74.6-93.8-266.3-136.4c-29.8-6.4-95.9-44.7-149.1-85.2C834.8-1637,790-1726.4,822-1781.8c8.5-17,319.6-200.3,688.1-409c368.6-208.8,864.9-500.7,1105.7-649.8c238.6-151.2,664.7-406.9,945.9-570.9c281.2-164.1,784-460.2,1116.4-658.3l602.9-360l419.7-85.2c302.5-61.8,658.3-110.8,1288.9-179c479.3-53.3,892.6-95.9,916.1-95.9c98,0,223.7,813.8,779.7,5027.8c140.6,1071.6,313.2,2352,381.4,2844.1c68.2,492.1,123.6,896.9,121.4,899.1c-2.1,0-394.1,61.8-875.6,134.2c-1188.8,176.8-2767.4,447.4-4056.3,690.3C3664,4918.4,3167.6,5010,3152.7,5010C3137.8,5010,3125,4999.4,3125,4984.4z"
           />
-          <div className="cooking__title">Cooking With React</div>
-          <div className="cooking__content">cooking content</div>
-          <div className="cooking__demo">cooking demo</div>
-          <div className="cooking__code">cooking code</div>
-        </div>
-        <div className="pixabay">pixabay</div>
-        <div className="portfolio">portfolio</div>
-        <div className="contact">contact</div>
-        <div className="footer">footer</div>
+        </g>
+      </svg>
+      <svg
+        className="body body__row-1 body__row-1__blob body__row-1__blob--rotate"
+        viewBox="0 0 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill="#F2545B"
+          d="M57.3,-67.9C72.4,-55.7,81.5,-35.8,85.2,-15C88.9,5.8,87.2,27.6,77.3,44.5C67.4,61.4,49.2,73.3,29.5,79.9C9.9,86.6,-11.3,87.9,-29.4,81.2C-47.5,74.4,-62.6,59.6,-71.6,42.2C-80.7,24.8,-83.7,4.7,-80.5,-14.3C-77.3,-33.4,-67.9,-51.6,-53.4,-63.9C-39,-76.2,-19.5,-82.8,0.8,-83.7C21.1,-84.7,42.2,-80.1,57.3,-67.9Z"
+          transform="translate(100 100)"
+        />
+      </svg>
+      <i className="fas fa-chevron-left body body__row-1 body__row-1__left-chevron body__row-1__left-chevron--move-left"></i>
+      <div className="body body__row-1 body__row-1__text body__row-1__text--fade-in">
+        Web Devloper
       </div>
+      <i class="fas fa-chevron-right body body__row-1 body__row-1__right-chevron body__row-1__right-chevron--move-right"></i>
+      <i class="fas fa-long-arrow-alt-down body body__row-1 body__row-1__arrow body__row-1__arrow--bounce"></i>
+
+      <div className="about-me__title">Hello, I'm Jason</div>
+      <div className="about-me__content">
+        I'm a web developer who left Arizona for Utah in 2017. I'm a recent
+        graduate from{" "}
+        <a href="#" className="link">
+          Lamba School
+        </a>{" "}
+        in their Full Stack Web Devloper track.
+      </div>
+      <svg
+        className="cooking__blob"
+        viewBox="0 0 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill="#00E5EA"
+          d="M41.9,-75C53.9,-65.6,63.1,-53.6,72,-40.7C80.8,-27.8,89.4,-13.9,91.1,1C92.9,15.9,87.7,31.8,78.7,44.4C69.6,57,56.6,66.3,42.8,74.6C29.1,83,14.5,90.4,-0.8,91.8C-16.1,93.2,-32.3,88.5,-43.7,78.8C-55.1,69.1,-61.9,54.4,-67.7,40.4C-73.5,26.4,-78.3,13.2,-78.3,0C-78.3,-13.2,-73.4,-26.4,-67.4,-40C-61.4,-53.6,-54.2,-67.5,-42.8,-77.3C-31.4,-87.1,-15.7,-92.7,-0.4,-92.1C14.9,-91.4,29.8,-84.5,41.9,-75Z"
+          transform="translate(100 100)"
+        />
+      </svg>
+
+      <img
+        className="cooking__image"
+        src="/Cooking-With-React.png"
+        alt="placeholder"
+      />
+      <div className="cooking__title">Cooking With React</div>
+      <div className="cooking__content">cooking content</div>
+      <div className="cooking__demo">cooking demo</div>
+      <div className="cooking__code">cooking code</div>
+      <div className="pixabay">pixabay</div>
+      <div className="portfolio">portfolio</div>
+      <div className="contact">contact</div>
+      <div className="footer">footer</div>
     </div>
   );
 };
