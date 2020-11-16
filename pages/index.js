@@ -2,12 +2,18 @@ const home = () => {
   return (
     <div className="body">
       <img
-        className="body body__car body__car--center-fixed"
+        className="
+          body 
+          body__car 
+          body__car--center-fixed"
         src="/car.png"
         alt="car"
       />
       <svg
-        className="body body__row-1 body__row-1__arizona"
+        className="
+          body 
+          body__row-1 
+          body__row-1__arizona"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         xmlns="http://www.w3.org/1999/xlink"
@@ -20,7 +26,11 @@ const home = () => {
         </g>
       </svg>
       <svg
-        className="body body__row-1 body__row-1__blob body__row-1__blob--rotate"
+        className="
+          body 
+          body__row-1 
+          body__row-1__blob 
+          body__row-1__blob--rotate"
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -29,22 +39,54 @@ const home = () => {
           transform="translate(100 100)"
         />
       </svg>
-      <i className="fas fa-chevron-left body body__row-1 body__row-1__left-chevron body__row-1__left-chevron--move-left" />
-      <div className="body body__row-1 body__row-1__text body__row-1__text--fade-in">
+      <i
+        className="
+          fas 
+          fa-chevron-left 
+          body 
+          body__row-1 
+          body__row-1__left-chevron 
+          body__row-1__left-chevron--move-left"
+      />
+      <div
+        className="
+          body 
+          body__row-1 
+          body__row-1__text 
+          body__row-1__text--fade-in"
+      >
         Web Devloper
       </div>
       <i class="fas fa-chevron-right body body__row-1 body__row-1__right-chevron body__row-1__right-chevron--move-right"></i>
-      <i class="fas fa-long-arrow-alt-down body body__row-1 body__row-1__arrow body__row-1__arrow--bounce"></i>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="body body__row-1 body__row-1__arrow body__row-1__arrow--bounce"
+        viewBox="0 0 24 24"
+      >
+        <path
+          // className="body body__row-1 body__row-1__arrow body__row-1__arrow--bounce"
+          d="M11.293,22.707a1,1,0,0,0,1.414,0l6-6a1,1,0,0,0-1.414-1.414L13,19.586V2a1,1,0,0,0-2,0V19.586L6.707,15.293a1,1,0,0,0-1.414,1.414Z"
+        />
+      </svg>
 
-      <div className="about-me__title">Hello, I'm Jason</div>
-      <div className="about-me__content">
-        I'm a web developer who left Arizona for Utah in 2017. I'm a recent
-        graduate from{" "}
-        <a href="#" className="link">
-          Lamba School
-        </a>{" "}
-        in their Full Stack Web Devloper track.
+      <div
+        className="
+        body 
+        body__row-2 
+        body__row-2__title"
+      >
+        Hello, I'm Jason
       </div>
+      <div
+        className="
+        body 
+        body__row-2 
+        body__row-2__content"
+      >
+        I'm a web developer who left Arizona for Utah in 2017. I'm a recent
+        graduate from Lamba School in their Full Stack Web Devloper track.
+      </div>
+      <div className="body body__row-2 body__row-2__hide-car"></div>
       <svg
         className="cooking__blob"
         viewBox="0 0 200 200"

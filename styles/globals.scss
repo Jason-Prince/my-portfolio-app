@@ -13,6 +13,11 @@ $primary-background: hsl(220,25%,18%);
 $secondary-background: hsl(180,50%,50%);
 $text-title: #FFFFFF;
 $text-content: #7C8898;
+$box-shadow:    0 2px 1px rgba(0,0,0,0.09), 
+                0 4px 2px rgba(0,0,0,0.09), 
+                0 8px 4px rgba(0,0,0,0.09), 
+                0 16px 8px rgba(0,0,0,0.09),
+                0 32px 16px rgba(0,0,0,0.09);
 
 
 body {
@@ -33,7 +38,7 @@ a:hover {
 .body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 100vh;
     justify-self: center;
     &__car {
         width: 100px;
@@ -51,9 +56,9 @@ a:hover {
         width: 411px;
         height: 100vh;
         &__blob {
-            z-index: -1;
             fill: $secondary-background;
             width: 390px;
+            z-index: -1;
             &--rotate {
                 animation: rotate 50s infinite;
             }
@@ -73,7 +78,6 @@ a:hover {
             }
         } 
         &__text {
-            z-index: 1;
             font-size: 3rem;
             color: $text-title;
             opacity: 0;
@@ -94,26 +98,49 @@ a:hover {
             }
         }
         &__arrow {
-            font-size: 2em;
-            color: $secondary-background;
-            z-index: 3;
+            fill: $secondary-background;
+            width: 100px;
             &--bounce {
                 animation: bounce 2s ease-in-out alternate infinite;
             }
         }
     }
-    .about-me__title {
-        grid-row: 3;
+    &__row-2 {
+        grid-row: 2;
         grid-column: 1;
-        font-size: 3rem;
-        text-align: center;
-        box-shadow: 0 0 150px #000000a6;
-    }
-    .about-me__content {
-        grid-row: 3;
-        grid-column: 1;
-        font-size: 2rem;
-        text-align: center;
+        width: 411px;
+        color: $text-title;
+        z-index: 1;
+        &__title {
+            width: 380px;
+            font-size: 3rem;
+            text-align: center;
+            position: relative;
+            top: 45%;
+            
+            &--fade-in {
+                animation: fade-in 2s 2s forwards;
+            }
+        }
+        &__content {
+            width: 380px;
+            text-align: center;
+            font-size: 2rem;
+            position: relative;
+            top: 55%;
+            &--fade-in {
+                animation: fade-in 2s 2s forwards;
+            }
+        }
+        &__hide-car {
+            background-color: $primary-background;
+            width: 411px;
+            height: 360px;
+            z-index: 0;
+            position: relative;
+            top: 45%;
+            opacity: .8;
+        }
     }
     .cooking__blob {
         grid-row: 4;
@@ -176,10 +203,11 @@ a:hover {
 }
 @keyframes bounce {
     0% {
-        
+        z-index: -1;
         transform: translateY(35%);
     }
     100% {
+        z-index: -1;
         transform: translateY(45%);
     }
 }
@@ -203,7 +231,12 @@ a:hover {
     }
 }
 @keyframes fade-in {
+    0% {
+        z-index: 1;
+    }
+    
     100% {
+        z-index: 1;
         opacity: 1;
     }
 }
