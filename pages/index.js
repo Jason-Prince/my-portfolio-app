@@ -52,39 +52,22 @@ const home = () => {
           body__row-1__right-chevron--move-right"
         ></i>
         <svg
-          className="
-          body__row-1__arrow 
-          body__row-1__arrow--bounce"
+          className="body__row-1__arrow body__row-1__arrow--bounce"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
           <path d="M11.293,22.707a1,1,0,0,0,1.414,0l6-6a1,1,0,0,0-1.414-1.414L13,19.586V2a1,1,0,0,0-2,0V19.586L6.707,15.293a1,1,0,0,0-1.414,1.414Z" />
         </svg>
       </div>
-
-      <div
-        className="
-        body 
-        body__row-2 
-        body__row-2__title"
-      >
-        Hello, I'm Jason
+      <div className="body__row-2">
+        <div className="body__row-2__card">
+          <div className="body__row-2__card__title">Hello, I'm Jason</div>
+          <div className="body__row-2__card__content">
+            I'm a web developer who left Arizona for Utah in 2017. I'm a recent
+            graduate from Lamba School in their Full Stack Web Devloper track.
+          </div>
+        </div>
       </div>
-      <div
-        className="
-        body 
-        body__row-2 
-        body__row-2__content"
-      >
-        I'm a web developer who left Arizona for Utah in 2017. I'm a recent
-        graduate from Lamba School in their Full Stack Web Devloper track.
-      </div>
-      <div
-        className="
-          body 
-          body__row-2 
-          body__row-2__hide-car"
-      ></div>
       <svg
         className="
           body 
