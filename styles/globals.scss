@@ -38,8 +38,11 @@ a:hover {
 .body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100vh;
-    justify-self: center;
+    grid-template-rows: 1fr;
+    justify-items: center;
+/*--------------------------- 
+            CAR 
+---------------------------*/
     &__car {
         width: 100px;
         &--center-fixed {
@@ -50,12 +53,19 @@ a:hover {
             z-index: 0;
         }
     }
+/*--------------------------- 
+           BANNER 
+---------------------------*/
     &__row-1 {
-        grid-row: 1;
-        grid-column: 1;
-        width: 411px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        justify-items: center;
         height: 100vh;
         &__blob {
+            grid-column: 1;
+            grid-row: 1;
+            align-self: center;
             fill: $secondary-background;
             width: 390px;
             z-index: -1;
@@ -64,11 +74,18 @@ a:hover {
             }
         }
         &__arizona {
+            grid-column: 1;
+            grid-row: 1;
+            align-self: center;
             z-index: 1;
             width: 300px;
             fill: $primary-background;
         }
         &__left-chevron {
+            grid-column: 1;
+            grid-row: 1;
+            align-self: start;
+            margin-top: 110px;
             font-size: 3rem;
             opacity: 0;
             z-index: 2;
@@ -78,17 +95,23 @@ a:hover {
             }
         } 
         &__text {
+            grid-column: 1;
+            grid-row: 1;
+            align-self: start;
+            margin-top: 110px;
             font-size: 3rem;
             color: $text-title;
             opacity: 0;
             text-align: center;
-            position: relative;
-            top: 47%;
             &--fade-in {
                 animation: fade-in 2s 2s forwards;
             }
         } 
         &__right-chevron {
+            grid-column: 1;
+            grid-row: 1;
+            align-self: start;
+            margin-top: 117px;
             font-size: 3rem;
             color: $text-title;
             opacity: 0;
@@ -98,6 +121,9 @@ a:hover {
             }
         }
         &__arrow {
+            grid-column: 1;
+            grid-row: 1;
+            align-self: end;
             fill: $secondary-background;
             width: 100px;
             &--bounce {
@@ -105,18 +131,24 @@ a:hover {
             }
         }
     }
+/*--------------------------- 
+          ABOUT ME 
+---------------------------*/
     &__row-2 {
         grid-row: 2;
         grid-column: 1;
         width: 411px;
         color: $text-title;
         z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         &__title {
             width: 380px;
             font-size: 3rem;
             text-align: center;
-            position: relative;
-            top: 45%;
+            // position: relative;
+            // top: 45%;
             
             &--fade-in {
                 animation: fade-in 2s 2s forwards;
@@ -126,8 +158,8 @@ a:hover {
             width: 380px;
             text-align: center;
             font-size: 2rem;
-            position: relative;
-            top: 55%;
+            // position: relative;
+            // top: 55%;
             &--fade-in {
                 animation: fade-in 2s 2s forwards;
             }
@@ -137,52 +169,68 @@ a:hover {
             width: 411px;
             height: 360px;
             z-index: 0;
-            position: relative;
-            top: 45%;
+            // position: relative;
+            // top: 45%;
             opacity: .8;
         }
     }
-    .cooking__blob {
-        grid-row: 4;
+/*--------------------------- 
+   FIRST PROJECT: COOKING
+---------------------------*/
+    &__row-3 {
+        grid-row: 3;
         grid-column: 1;
-        z-index: 0;
-        width: 390px;
+        width: 411px;
+        &__blob {
+            fill: $secondary-background;
+            width: 390px;
+            z-index: -1;
+            &--rotate {
+                animation: rotate 50s infinite;
+            }
+        }
+        &__image {
+            z-index: 1;
+        }
+        &__title {
+            grid-row: 4;
+            grid-column: 1;
+            font-size: 2rem;
+            color: white;
+        }
+        &__content {
+            color: $text-content;
+        }
+        &__demo {
+            
+        }
+        &__code {
+        }
     }
-    .cooking__image {
-        grid-row: 4;
-        grid-column: 1;
-        width: 100%;
-        z-index: 1;
-    }
-    .cooking__title {
-        grid-row: 4;
-        grid-column: 1;
-        font-size: 2rem;
-    }
-    .cooking__content {
-        grid-row: 4;
-        grid-column: 1;
-    }
-    .cooking__demo {
-        grid-row: 4;
-        grid-column: 1;
-    }
-    .cooking__code {
-        grid-row: 4;
-        grid-column: 1;
-    }
+/*--------------------------- 
+   SECOND PROJECT: PIXABAY 
+---------------------------*/
     .pixabay {
         grid-row: 5;
         grid-column: 1;
     }
+/*--------------------------- 
+   THIRD PROJECT: PORTFOLIO 
+---------------------------*/
     .portfolio {
         grid-row: 6;
         grid-column: 1;
     }
+/*--------------------------- 
+         CONTACT ME 
+---------------------------*/
     .contact {
         grid-row: 7;
         grid-column: 1;
     }
+/*--------------------------- 
+           FOOTER 
+---------------------------*/
     .footer {
         grid-row: 8;
         grid-column: 1;
@@ -204,11 +252,11 @@ a:hover {
 @keyframes bounce {
     0% {
         z-index: -1;
-        transform: translateY(35%);
+        transform: translateY(0);
     }
     100% {
         z-index: -1;
-        transform: translateY(45%);
+        transform: translateY(-15%);
     }
 }
 @keyframes move-left {
