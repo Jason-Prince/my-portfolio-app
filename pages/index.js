@@ -68,60 +68,32 @@ const home = () => {
           </div>
         </div>
       </div>
-      <svg
-        className="
-          body 
-          body__row-3 
-          body__row-3__blob 
-          body__row-3__blob--rotate"
-        viewBox="0 0 200 200"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M57.3,-67.9C72.4,-55.7,81.5,-35.8,85.2,-15C88.9,5.8,87.2,27.6,77.3,44.5C67.4,61.4,49.2,73.3,29.5,79.9C9.9,86.6,-11.3,87.9,-29.4,81.2C-47.5,74.4,-62.6,59.6,-71.6,42.2C-80.7,24.8,-83.7,4.7,-80.5,-14.3C-77.3,-33.4,-67.9,-51.6,-53.4,-63.9C-39,-76.2,-19.5,-82.8,0.8,-83.7C21.1,-84.7,42.2,-80.1,57.3,-67.9Z"
-          transform="translate(100 100)"
-        />
-      </svg>
-
-      <img
-        className="
-          body 
-          body__row-3 
-          body__row-3__image"
-        src="/Cooking-With-React.png"
-        alt="placeholder"
-      />
-      <div
-        className="
-          body 
-          body__row-3 
-          body__row-3__title"
-      >
-        Cooking With React
-      </div>
-      <div
-        className="
-          body 
-          body__row-3 
-          body__row-3__content"
-      >
-        cooking content
-      </div>
-      <div
-        className="
-          body 
-          body__row-3 
-          body__row-3__demo"
-      >
-        cooking demo
-      </div>
-      <div
-        className="
-          body 
-          body__row-3 
-          body__row-3__code"
-      >
-        cooking code
+      <div className="body__row-3">
+        <div className="body__row-3__card">
+          <svg
+            className="body__row-3__card__blob body__row-3__card__blob--rotate"
+            viewBox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M57.3,-67.9C72.4,-55.7,81.5,-35.8,85.2,-15C88.9,5.8,87.2,27.6,77.3,44.5C67.4,61.4,49.2,73.3,29.5,79.9C9.9,86.6,-11.3,87.9,-29.4,81.2C-47.5,74.4,-62.6,59.6,-71.6,42.2C-80.7,24.8,-83.7,4.7,-80.5,-14.3C-77.3,-33.4,-67.9,-51.6,-53.4,-63.9C-39,-76.2,-19.5,-82.8,0.8,-83.7C21.1,-84.7,42.2,-80.1,57.3,-67.9Z"
+              transform="translate(100 100)"
+            />
+          </svg>
+          <img
+            className="body__row-3__card__image"
+            src="/Cooking-With-React.png"
+            alt="cooking with react"
+          />
+          <div className="body__row-3__card__title">Cooking With React</div>
+          <div className="body__row-3__card__content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex mollitia
+            obcaecati dicta officiis consequuntur consequatur debitis cupiditate
+            atque omnis, veritatis doloribus minus maxime, dolorum facilis
+          </div>
+          <div className="body__row-3__card__demo">demo</div>
+          <div className="body__row-3__card__code">code</div>
+        </div>
       </div>
       <div className="pixabay">pixabay</div>
       <div className="portfolio">portfolio</div>

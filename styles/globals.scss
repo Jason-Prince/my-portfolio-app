@@ -148,7 +148,7 @@ a:hover {
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
-            place-self: center;
+            align-self: center;
             height: 280px;
             padding: 1em;
             background-color: $primary-background;
@@ -179,33 +179,86 @@ a:hover {
    FIRST PROJECT: COOKING
 ---------------------------*/
     &__row-3 {
-        grid-row: 3;
-        grid-column: 1;
-        width: 411px;
-        &__blob {
-            fill: $secondary-background;
-            width: 390px;
-            z-index: -1;
-            &--rotate {
-                animation: rotate 50s infinite;
-            }
-        }
-        &__image {
-            z-index: 1;
-        }
-        &__title {
-            grid-row: 4;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        justify-items: center;
+        height: 100vh;
+        &__card {
             grid-column: 1;
-            font-size: 2rem;
-            color: white;
-        }
-        &__content {
-            color: $text-content;
-        }
-        &__demo {
-            
-        }
-        &__code {
+            grid-row: 1;
+            width: 411px;
+            align-self: center;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            align-self: center;
+            height: 600px;
+            padding: 1em;
+            z-index: 1;
+            &__blob {
+                grid-column: 1;
+                grid-row: 1;
+                align-self: start;
+                fill: $secondary-background;
+                width: 390px;
+                z-index: -1;
+                &--rotate {
+                    animation: rotate 30s linear infinite;
+                }
+            }
+            &__image {
+                grid-column: 1;
+                grid-row: 1;
+                align-self: start;
+                width: 411px;
+                padding-top: 40px;
+                z-index: 1;
+            }
+            &__title {
+                grid-column: 1;
+                grid-row: 1;
+                align-self: center;
+                justify-self: center;
+                width: 350px;
+                font-size: 2rem;
+                color: $text-title;
+                padding-top: 200px;
+                z-index: 1;
+            }
+            &__content {
+                grid-column: 1;
+                grid-row: 1;
+                align-self: center;
+                justify-self: center;
+                width: 350px;
+                color: $text-content;
+                margin-top: 300px;
+                padding-top: 50px;
+                background-color: $primary-background;
+                opacity: .8;
+            }
+            &__demo {
+                grid-column: 1;
+                grid-row: 1;
+                width: 411px;
+                align-self: end;
+                justify-self: center;
+                text-align: left;
+                width: 350px;
+                color: $secondary-background;
+                
+            }
+            &__code {
+                grid-column: 1;
+                grid-row: 1;
+                width: 411px;
+                align-self: end;
+                justify-self: center;
+                text-align: right;
+                width: 350px;
+                color: $secondary-background;
+            }
         }
     }
 /*--------------------------- 
@@ -243,11 +296,8 @@ a:hover {
          ANIMATIONS 
 ---------------------------*/
 @keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
     100% {
-        transform: rotate(359deg);
+        transform: rotate(360deg);
     }
 }
 @keyframes bounce {
